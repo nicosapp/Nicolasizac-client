@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-bottom-navigation
-      v-if="$auth.loggedIn"
+      v-if="verified"
       v-model="active"
       grow
       app
@@ -34,6 +34,7 @@
         <v-icon>mdi-account-circle</v-icon>
       </v-btn>
     </v-bottom-navigation>
+    <v-bottom-sheet> </v-bottom-sheet>
   </div>
 </template>
 
@@ -50,6 +51,9 @@ export default {
     ...mapGetters({
       activeValue: 'bottomBar/active',
     }),
+    verified() {
+      return this.$auth.loggedIn && this.$auth.user.is_verified
+    },
     active: {
       get() {
         return this.activeValue

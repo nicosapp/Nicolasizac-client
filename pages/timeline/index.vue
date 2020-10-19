@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  middleware: ['verified'],
   mounted() {
     this.$store.dispatch('bottomBar/setActive', 'timeline')
   },

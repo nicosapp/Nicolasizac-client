@@ -51,18 +51,25 @@
               Sign in
             </v-btn>
           </div>
+          <div class="text-center">
+            No account ?
+            <nuxt-link to="/auth/signup">Create one here</nuxt-link>
+          </div>
         </v-form>
-        <div class="text-center">
-          No account ?
-          <nuxt-link to="/auth/signup">Create one here</nuxt-link>
-        </div>
+        <div><SocialLoginButton :socials="['google', 'facebook']" /></div>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import SocialLoginButton from '../components/SocialLoginButton'
+
 export default {
+  middleware: ['guest'],
+  components: {
+    SocialLoginButton,
+  },
   data() {
     return {
       valid: true,
@@ -85,16 +92,20 @@ export default {
       return Object.keys(this.validation).length
     },
   },
+  mounted() {
+    if (this.$route.query.error) {
+      this.$notifier.error({ message: this.$route.query.error })
+    }
+  },
   methods: {
     validate() {
       this.$refs.form.validate()
     },
     async signin() {
-      // console.log(this.form)
       try {
-        await this.$axios.$get('sanctum/csrf-cookie')
+        await this.$axios.$get(`${process.env.appUrl}/sanctum/csrf-cookie`)
         await this.$auth.loginWith('local', { data: this.form })
-        this.$router.push({ name: 'dashboard' })
+        this.$router.push({ name: 'account' })
         this.validation = {}
       } catch (e) {
         if (e.response && e.response.status === 422) {

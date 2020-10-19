@@ -28,6 +28,7 @@ export default {
     '~/plugins/axiosRedirection',
     '~/plugins/notifier',
     '~/plugins/dialog',
+    '~/plugins/alert',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -67,21 +68,37 @@ export default {
   },
   // Auth module configuration
   auth: {
+    redirect: {
+      login: false,
+      home: false,
+    },
     strategies: {
       local: {
         endpoints: {
           login: {
-            url: '/auth/signin',
+            url: '/login',
             method: 'post',
+            // headers: {
+            //   'X-Requested-With': 'XMLHttpRequest',
+            //   'Content-Type': 'application/json',
+            // },
           },
           logout: {
-            url: '/auth/signout',
+            url: '/logout',
             method: 'post',
+            // headers: {
+            //   'X-Requested-With': 'XMLHttpRequest',
+            //   'Content-Type': 'application/json',
+            // },
           },
           user: {
             url: '/user',
             method: 'get',
             propertyName: 'data',
+            // headers: {
+            //   'X-Requested-With': 'XMLHttpRequest',
+            //   'Content-Type': 'application/json',
+            // },
           },
         },
         tokenRequired: false,
@@ -93,6 +110,10 @@ export default {
   axios: {
     credentials: true,
     baseURL: env.parsed.API_URL,
+  },
+
+  env: {
+    appUrl: env.parsed.APP_URL,
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)

@@ -3,6 +3,7 @@
     <AccountAppBar />
     <v-main>
       <v-container>
+        <TheAlert />
         <nuxt />
       </v-container>
     </v-main>

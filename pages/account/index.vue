@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <VerifyLink />
     <h2 class="text-center mb-4">Hello {{ $auth.user.name }}</h2>
     <div class="d-flex">
       <h3 class="mb-4 flex-grow-1">User informations</h3>
@@ -197,9 +198,12 @@
 <script>
 import validationRules from '@/mixins/helper/formValidationRules'
 import AvatarUpload from './components/AvatarUpload'
+import VerifyLink from './components/VerifyLink'
+
 export default {
   components: {
     AvatarUpload,
+    VerifyLink,
   },
   layout: 'account',
   mixins: [validationRules],
@@ -286,7 +290,7 @@ export default {
       }
     },
   },
-  middleware: ['verified'],
+  middleware: ['isAuth'],
   head() {
     return {
       title: 'Account',

@@ -64,6 +64,8 @@
 
           <div class="d-flex justify-center">
             <v-btn
+              block
+              height="3em"
               type="submit"
               :disabled="!valid"
               color="primary"
@@ -76,8 +78,9 @@
         </v-form>
         <div class="text-center">
           Already an account ?
-          <nuxt-link to="/auth/signup">Sign up here</nuxt-link>
+          <nuxt-link to="/auth/signup">Sign in here</nuxt-link>
         </div>
+        <div><SocialLoginButton :socials="['google', 'facebook']" /></div>
       </v-col>
     </v-row>
   </v-container>
@@ -85,7 +88,11 @@
 
 <script>
 import validationRules from '@/mixins/helper/formValidationRules'
+import SocialLoginButton from '../components/SocialLoginButton'
 export default {
+  components: {
+    SocialLoginButton,
+  },
   mixins: [validationRules],
   data() {
     return {
