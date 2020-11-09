@@ -46,8 +46,8 @@
               :disabled="!valid || loading"
               color="primary"
               height="3rem"
-              @click="validate"
               :loading="loading"
+              @click="validate"
             >
               Sign in
             </v-btn>
@@ -73,6 +73,7 @@ export default {
   },
   data() {
     return {
+      loading: false,
       valid: true,
       email: '',
       password: '',
@@ -105,7 +106,7 @@ export default {
     async signin() {
       this.loading = true
       try {
-        await this.$axios.$get(`${process.env.appUrl}/sanctum/csrf-cookie`)
+        await this.$axios.$get(`${process.env.APP_URL}/sanctum/csrf-cookie`)
         await this.$auth.loginWith('local', { data: this.form })
         this.$router.push({ name: 'account' })
         this.validation = {}
