@@ -10,12 +10,16 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - MyVoc',
-    title: 'MyVoc',
+    titleTemplate: '%s - Niz',
+    title: 'Niz',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'Freelance developper Fullstack',
+        content: '',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -51,6 +55,29 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/auth',
+    [
+      'nuxt-i18n',
+      {
+        defaultLocale: 'fr',
+        strategy: 'no_prefix',
+        locales: [
+          {
+            name: 'English',
+            code: 'en',
+            iso: 'en-US',
+            file: 'en-US.js',
+          },
+          {
+            name: 'Français',
+            code: 'fr',
+            iso: 'fr-FR',
+            file: 'fr-FR.js',
+          },
+        ],
+        lazy: true,
+        langDir: 'locales/',
+      },
+    ],
   ],
 
   // PWA module configuration
@@ -117,10 +144,13 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
+          bg: '#21222e',
+          'bg-second': '#303144',
         },
         light: {
           primary: '#03A678',
-          primaryText: '#ffffff',
+          bg: '#FFFFFF',
+          'bg-second': '#F5F5F5',
         },
       },
     },

@@ -65,13 +65,13 @@
 </template>
 
 <script>
-import validationRules from '@/mixins/helper/formValidationRules'
+import { rulesTextField as rules } from '@/plugins/formValidation'
 export default {
-  mixins: [validationRules],
   data() {
     return {
       valid: true,
       show: false,
+      rules,
       form: {
         email: '',
         password: '',

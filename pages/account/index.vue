@@ -198,7 +198,7 @@
   </v-container>
 </template>
 <script>
-import validationRules from '@/mixins/helper/formValidationRules'
+import { rulesTextField as rules } from '@/plugins/formValidation'
 import AvatarUpload from './components/AvatarUpload'
 import VerifyLink from './components/VerifyLink'
 
@@ -208,7 +208,6 @@ export default {
     VerifyLink,
   },
   layout: 'account',
-  mixins: [validationRules],
   data() {
     return {
       validUserPassword: true,
@@ -217,6 +216,7 @@ export default {
       show: false,
       nameLength: (v) => v.length >= 4 || 'Min 4 characters',
       validation: {},
+      rules,
       form: {
         name: this.$auth.user.name,
         email: this.$auth.user.email,

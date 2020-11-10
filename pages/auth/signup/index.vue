@@ -88,13 +88,12 @@
 </template>
 
 <script>
-import validationRules from '@/mixins/helper/formValidationRules'
+import { rulesTextField as rules } from '@/plugins/formValidation'
 import SocialLoginButton from '../components/SocialLoginButton'
 export default {
   components: {
     SocialLoginButton,
   },
-  mixins: [validationRules],
   data() {
     return {
       loading: false,
@@ -102,6 +101,7 @@ export default {
       show: false,
       nameLength: (v) => v.length >= 4 || 'Min 4 characters',
       validation: {},
+      rules,
       form: {
         name: '',
         email: '',

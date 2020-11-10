@@ -27,6 +27,20 @@ a {
     padding: 0;
   }
 }
+.bg-gradient-primary {
+  background: linear-gradient(
+    hsl(
+      hue($color-primary),
+      saturation($color-primary),
+      lightness($color-primary)
+    ),
+    hsl(
+      hue($color-primary),
+      saturation($color-primary),
+      lightness($color-primary) + 10%
+    )
+  ) !important;
+}
 
 // .v-application {
 //   font-family: 'Patrick Hand', cursive !important;

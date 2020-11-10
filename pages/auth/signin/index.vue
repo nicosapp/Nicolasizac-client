@@ -64,8 +64,8 @@
 </template>
 
 <script>
+import { rulesTextField as rules } from '@/plugins/formValidation'
 import SocialLoginButton from '../components/SocialLoginButton'
-
 export default {
   middleware: ['guest'],
   components: {
@@ -79,10 +79,7 @@ export default {
       password: '',
       show: false,
       validation: {},
-      rules: {
-        required: (value) => !!value || 'Required.',
-        emailValid: (v) => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-      },
+      rules,
       form: {
         email: '',
         password: '',

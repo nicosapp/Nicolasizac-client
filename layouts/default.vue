@@ -6,6 +6,8 @@
         <TheAlert />
         <nuxt />
       </v-container>
+      <TheFooter />
+      <TheSubFooter />
     </v-main>
     <TheFixedComponents />
   </v-app>

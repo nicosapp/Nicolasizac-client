@@ -1,81 +1,31 @@
 <template>
-  <v-app-bar :clipped-left="false" fixed app color="primary">
-    <!-- MIDDLE -->
+  <v-app-bar class="bg" :clipped-left="false" fixed app>
+    <nuxt-link to="/">
+      <v-img src="/icon.png" :max-height="logoHeight" :max-width="logoHeight">
+      </v-img>
+    </nuxt-link>
+
     <v-spacer />
-    <v-img
-      class="mr-3"
-      max-height="60px"
-      contain
-      :src="require('~/assets/logo.svg')"
-    ></v-img>
-    <v-spacer />
-    <!-- MIDDLE -->
-    <v-btn
-      v-if="!$auth.loggedIn && isHomePage"
-      color="primaryText"
-      icon
-      nuxt
-      to="/auth/signin"
-    >
-      <v-icon>mdi-login-variant</v-icon>
-    </v-btn>
-    <v-btn
-      v-if="$auth.loggedIn && isHomePage"
-      color="primaryText"
-      icon
-      nuxt
-      to="timeline"
-    >
-      <v-icon>mdi-format-list-text</v-icon>
-    </v-btn>
+    <MenuSwitcher />
+    <NavigationButton to="services">{{ $t('Services') }}</NavigationButton>
+    <NavigationButton to="projects">{{ $t('Projects') }}</NavigationButton>
+    <NavigationButton to="tech-profile">
+      {{ $t('Tech profile') }}
+    </NavigationButton>
+    <NavigationButton to="blog">{{ $t('Blog') }}</NavigationButton>
+    <NavigationButton to="contact" class="bg-gradient-primary" :dark="true">
+      <v-icon class="mr-2">mdi-email</v-icon>
+      {{ $t('Contact-me') }}
+    </NavigationButton>
   </v-app-bar>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
 export default {
-  props: {
-    page: {
-      required: false,
-      type: String,
-      default: '',
-    },
-  },
   data() {
-    return {}
-  },
-  computed: {
-    ...mapGetters({
-      drawerLeft: 'drawerLeft/value',
-    }),
-    logo() {
-      return '~/assets/logo.svg'
-    },
-    title() {
-      switch (this.page) {
-        case 'account':
-          return 'Your profile'
-        default:
-          return 'MyCodeSnippets'
-      }
-    },
-    isSigninPage() {
-      return this.$route.path.indexOf('signin') > 0
-    },
-    isAccountPage() {
-      return this.$route.path.indexOf('account') > 0
-    },
-    isHomePage() {
-      return this.$route.path.length === 1
-    },
-  },
-  methods: {
-    ...mapActions({
-      setDrawerLeft: 'drawerLeft/setValue',
-    }),
-    toggleLeft() {
-      this.setDrawerLeft(!this.drawerLeft)
-    },
+    return {
+      logoHeight: 56,
+    }
   },
 }
 </script>
