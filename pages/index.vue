@@ -1,10 +1,10 @@
 <template>
   <div>
-    <PresentationSection />
-    <MeSection />
-    <ServicesSection />
-    <ProjectsSection />
-    <ExperiencesSection />
+    <SectionPresentation />
+    <SectionMe />
+    <SectionServices />
+    <SectionProjects />
+    <SectionExperiences />
   </div>
 </template>
 

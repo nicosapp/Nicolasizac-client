@@ -7,13 +7,21 @@
 
     <v-spacer />
     <MenuSwitcher />
-    <NavigationButton to="services">{{ $t('Services') }}</NavigationButton>
-    <NavigationButton to="projects">{{ $t('Projects') }}</NavigationButton>
-    <NavigationButton to="tech-profile">
-      {{ $t('Tech profile') }}
+    <NavigationButton
+      v-for="nav in navButton"
+      :key="nav.to"
+      :to="nav.to"
+      class="mx-1"
+    >
+      {{ nav.name }}
     </NavigationButton>
-    <NavigationButton to="blog">{{ $t('Blog') }}</NavigationButton>
-    <NavigationButton to="contact" class="bg-gradient-primary" :dark="true">
+
+    <!-- <NavigationButton to="blog">{{ $t('Blog') }}</NavigationButton> -->
+    <NavigationButton
+      to="contact"
+      class="bg-gradient-primary ml-2"
+      :dark="true"
+    >
       <v-icon class="mr-2">mdi-email</v-icon>
       {{ $t('Contact-me') }}
     </NavigationButton>
@@ -25,6 +33,11 @@ export default {
   data() {
     return {
       logoHeight: 56,
+      navButton: [
+        { name: this.$i18n.t('Services'), to: 'services' },
+        { name: this.$i18n.t('Projects'), to: 'projects' },
+        { name: this.$i18n.t('Tech profile'), to: 'tech-profile' },
+      ],
     }
   },
 }

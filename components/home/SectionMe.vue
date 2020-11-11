@@ -1,5 +1,5 @@
 <template>
-  <TheSection color-class="bg">
+  <TheSection bg-class="bg">
     <v-row justify="center" align="center">
       <v-col cols="12" md="6" data-aos="fade-up">
         <p class="mb-8">
@@ -31,15 +31,3 @@
     </v-row>
   </TheSection>
 </template>
-
-<script>
-import AOS from '@/plugins/aos'
-export default {
-  mounted() {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    })
-  },
-}
-</script>

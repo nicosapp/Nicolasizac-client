@@ -1,5 +1,5 @@
 <template>
-  <div class="title-container" data-aos="title-active">
+  <div class="title-container" data-aos="title-active" data-aos-once="true">
     <div class="icon-container">
       <IconHexagone
         class="primary--text icon outlined"
@@ -7,7 +7,7 @@
         width="120"
       />
       <IconHexagone
-        class="grey--text text--lighten-2 icon filled"
+        class="accent--text icon filled"
         height="120"
         width="120"
         :fill="true"
@@ -22,17 +22,6 @@
   </div>
 </template>
 
-<script>
-import AOS from '@/plugins/aos'
-export default {
-  mounted() {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    })
-  },
-}
-</script>
 <style scoped lang="scss">
 .title-container {
   position: relative;
@@ -42,7 +31,7 @@ export default {
   }
   .icon-container {
     position: absolute;
-    left: 300px;
+    right: -120px;
     top: 50%;
     transform: translateY(-60%);
     .icon {
@@ -64,7 +53,8 @@ export default {
   }
   &.aos-animate {
     .bottom-bar {
-      width: 200px;
+      width: 70%;
+      max-width: 200px;
     }
     .icon {
       transition: all 0.8s ease-in-out;

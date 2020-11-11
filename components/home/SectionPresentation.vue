@@ -1,9 +1,19 @@
 <template>
-  <TheSection color-class="bg-second">
+  <TheSection bg-class="bg-second">
     <v-row justify="center" align="center" style="width: 100%">
       <v-col cols="6" style="position: relative; z-index: 1">
-        <h1 class="text-h1 mb-2" data-aos="fade-up">Nicolas Izac</h1>
-        <p class="text-h3" data-aos="fade-up">
+        <h1
+          class="font-weight-bold mb-2"
+          style="font-size: 4rem"
+          data-aos="fade-up"
+        >
+          Nicolas Izac
+        </h1>
+        <p
+          class="font-weight-medium"
+          data-aos="fade-up"
+          style="font-size: 2.5rem !important"
+        >
           {{ $t('Freelance fullstack Js/PHP développeur') }}
         </p>
         <p class="text-h5" data-aos="fade-up">
@@ -30,7 +40,7 @@
           <div class="scroll-animation-wrapper" :style="scrollAnimationStyle">
             <IconHexagone
               data-aos="presentation-animation"
-              class="bg-icon grey--text text--lighten-2"
+              class="bg-icon accent--text"
               height="400"
               width="400"
               :fill="true"
@@ -43,7 +53,6 @@
 </template>
 
 <script>
-import AOS from '@/plugins/aos'
 export default {
   data() {
     return {
@@ -60,9 +69,6 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
-    AOS.init({
-      once: true,
-    })
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)

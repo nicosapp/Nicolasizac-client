@@ -33,6 +33,7 @@ export default {
     '~/plugins/notifier',
     '~/plugins/dialog',
     '~/plugins/alert',
+    '~/plugins/aos',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -149,6 +150,7 @@ export default {
         },
         light: {
           primary: '#03A678',
+          accent: colors.grey.lighten2,
           bg: '#FFFFFF',
           'bg-second': '#F5F5F5',
         },
