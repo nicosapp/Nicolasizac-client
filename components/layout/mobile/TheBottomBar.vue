@@ -1,40 +1,28 @@
 <template>
   <div>
     <v-bottom-navigation
-      v-if="verified"
-      v-model="active"
+      v-if="$vuetify.breakpoint.mobile"
       grow
       app
+      fixed
       class="bottomBar"
       color="primary"
       :min-width="0"
+      shift
     >
-      <v-btn value="timeline" @click="pushRoute('timeline', 'timeline')">
-        <div>Words</div>
-        <v-icon>mdi-format-list-text</v-icon>
-      </v-btn>
+      <v-btn
+        v-for="nav in items"
+        :key="nav.to"
+        exact
+        class="text-capitalize"
+        :value="nav.to"
+        :to="{ name: nav.to }"
+      >
+        <span>{{ nav.name }}</span>
 
-      <v-btn value="actions" @click="pushRoute('dashboard', 'actions')">
-        <div>Actions</div>
-        <v-icon>mdi-playlist-edit</v-icon>
-      </v-btn>
-
-      <v-btn value="create" @click="createSnippet">
-        <div>Create</div>
-        <v-icon>mdi-plus-circle-outline</v-icon>
-      </v-btn>
-
-      <v-btn value="dashboard" @click="pushRoute('dashboard', 'dashboard')">
-        <div>Dashboard</div>
-        <v-icon>mdi-view-dashboard-variant-outline</v-icon>
-      </v-btn>
-
-      <v-btn value="account" @click="pushRoute('account', 'account')">
-        <div>Account</div>
-        <v-icon>mdi-account-circle</v-icon>
+        <v-icon>{{ nav.icon }}</v-icon>
       </v-btn>
     </v-bottom-navigation>
-    <v-bottom-sheet> </v-bottom-sheet>
   </div>
 </template>
 
@@ -44,7 +32,25 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   data() {
     return {
-      value: 'home',
+      model: 'index',
+      items: [
+        { name: this.$i18n.t('Home'), to: 'index', icon: 'mdi-home-outline' },
+        {
+          name: this.$i18n.t('Services'),
+          to: 'services',
+          icon: 'mdi-handshake-outline',
+        },
+        {
+          name: this.$i18n.t('Projects'),
+          to: 'projects',
+          icon: 'mdi-book-education-outline',
+        },
+        {
+          name: this.$i18n.t('Profile'),
+          to: 'tech-profile',
+          icon: 'mdi-account-tie-outline',
+        },
+      ],
     }
   },
   computed: {
@@ -74,17 +80,6 @@ export default {
       this.$router.push({
         name: route,
       })
-    },
-
-    async createSnippet() {
-      try {
-        const snippet = await this.$axios.$post('snippets')
-        this.setActive('create')
-        this.$router.push({
-          name: 'snippets-id-edit',
-          params: { id: snippet.data.uuid },
-        })
-      } catch (e) {}
     },
   },
 }

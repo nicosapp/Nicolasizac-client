@@ -2,28 +2,12 @@
   <div class="bg-second">
     <v-container style="padding: 6rem 0">
       <v-row :class="{ 'mb-16': $slots.subtitle }" :style="flexStyle">
-        <v-col
-          cols="12"
-          md="7"
-          class="d-flex"
-          :class="[
-            { 'justify-center': !reverse },
-            { 'justify-start': reverse },
-          ]"
-        >
+        <v-col cols="12" md="7" class="d-flex" :class="[justifyTitle]">
           <ThePageTitle>
             {{ title }}
           </ThePageTitle>
         </v-col>
-        <v-col
-          cols="12"
-          md="5"
-          class="d-flex"
-          :class="[
-            { 'justify-center': reverse },
-            { 'justify-start': !reverse },
-          ]"
-        >
+        <v-col cols="12" md="5" class="d-flex" :class="[justifyImage]">
           <slot name="image" />
         </v-col>
       </v-row>
@@ -41,17 +25,27 @@ export default {
       type: String,
       required: true,
     },
-    reverse: {
+    titleLeft: {
       type: Boolean,
       required: false,
-      default: false,
+      default: true,
     },
   },
   computed: {
     flexStyle() {
       return {
-        'flex-direction': this.reverse ? 'row-reverse' : 'row',
+        'flex-direction': this.titleLeft ? 'row-reverse' : 'row',
       }
+    },
+    justifyTitle() {
+      if (this.titleLeft && !this.$vuetify.breakpoint.mobile)
+        return 'justify-center'
+      return 'justify-start'
+    },
+    justifyImage() {
+      if (this.titleLeft && !this.$vuetify.breakpoint.mobile)
+        return 'justify-start'
+      return 'justify-center'
     },
   },
 }

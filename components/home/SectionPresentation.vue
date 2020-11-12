@@ -1,32 +1,34 @@
 <template>
   <TheSection bg-class="bg-second">
     <v-row justify="center" align="center" style="width: 100%">
-      <v-col cols="6" style="position: relative; z-index: 1">
+      <v-col cols="12" md="6" style="position: relative; z-index: 1">
         <h1
           class="font-weight-bold mb-2"
           style="font-size: 4rem"
           data-aos="fade-up"
+          data-aos-once="true"
         >
           Nicolas Izac
         </h1>
-        <p
-          class="font-weight-medium"
+        <div
+          class="font-weight-medium mb-8"
           data-aos="fade-up"
+          data-aos-once="true"
           style="font-size: 2.5rem !important"
         >
           {{ $t('Freelance fullstack Js/PHP développeur') }}
-        </p>
-        <p class="text-h5" data-aos="fade-up">
+        </div>
+        <div class="text-h5 mb-14" data-aos="fade-up" data-aos-once="true">
           {{ $t('Spécialisé font-end avec') }}
 
           <span class="font-weight-bold primary--text">Vue.JS & Nuxt.JS</span>
-        </p>
-        <p class="text-h5" data-aos="fade-up">
+          <br />
           {{ $t('et back-end avec') }}
           <span class="font-weight-bold primary--text">Laravel</span>
-        </p>
+        </div>
         <v-btn
           data-aos="fade-up"
+          data-aos-once="true"
           large
           dark
           class="bg-gradient-primary text-capitalize"

@@ -1,11 +1,13 @@
 <template>
   <div style="overflow: hidden" :class="`${bgClass}`">
-    <v-container
-      style="padding: 6rem 0"
-      class="d-flex flex-column align-center"
-    >
-      <slot />
-    </v-container>
+    <TheContainer>
+      <v-container
+        style="padding: 6rem 0"
+        class="d-flex flex-column align-center"
+      >
+        <slot />
+      </v-container>
+    </TheContainer>
   </div>
 </template>
 

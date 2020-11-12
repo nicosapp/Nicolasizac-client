@@ -1,9 +1,12 @@
 <template>
-  <div class="bg">
-    <ThePageHeader :title="$t('Services')">
-      <template v-slot:image> Image </template>
-    </ThePageHeader>
-    <v-container class="py-10">
+  <ThePageTemplate>
+    <template v-slot:header>
+      <ThePageHeader :title="$t('Services')">
+        <template v-slot:image> Image </template>
+      </ThePageHeader>
+    </template>
+
+    <template v-slot:default>
       <ServiceFrontend />
       <v-divider class="bg-second" style="min-height: 3px"></v-divider>
       <ServiceBackend :reverse="true" />
@@ -23,8 +26,8 @@
           <v-icon class="mr-2">mdi-arrow-right-thick</v-icon></v-btn
         >
       </div>
-    </v-container>
-  </div>
+    </template>
+  </ThePageTemplate>
 </template>
 
 <script>

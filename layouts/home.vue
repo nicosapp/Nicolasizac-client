@@ -7,16 +7,30 @@
       <TheFooter />
       <TheSubFooter />
     </v-main>
-    <v-btn to="contact" class="fab-message bg-gradient-primary" dark fab>
+    <v-btn
+      to="contact"
+      class="fab-message bg-gradient-primary"
+      :style="fabMessageStyle"
+      dark
+      fab
+    >
       <v-icon>mdi-message-text</v-icon>
     </v-btn>
+    <TheBottomBar />
+    <TheFixedComponents />
   </v-app>
 </template>
 
-<style scoped>
-.fab-message {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
+<script>
+export default {
+  computed: {
+    fabMessageStyle() {
+      return {
+        position: 'fixed',
+        bottom: this.$vuetify.breakpoint.mobile ? '80px' : '30px',
+        right: '15px',
+      }
+    },
+  },
 }
-</style>
+</script>

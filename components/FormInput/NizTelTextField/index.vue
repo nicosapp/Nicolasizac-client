@@ -37,7 +37,7 @@
       type="number"
       filled
       prepend-inner-icon="mdi-phone"
-      :rules="rules"
+      :rules="rulesValidation"
       :label="label"
       :disabled="disabled"
     ></v-text-field>
@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import { rulesTextField } from '@/plugins/formValidation'
 import countries from './assets/all-countries'
 export default {
   props: {
@@ -71,6 +72,14 @@ export default {
     }
   },
   computed: {
+    rulesValidation() {
+      return [
+        ...this.rules,
+        rulesTextField.min(9, this.phoneNumber),
+        rulesTextField.max(14, this.phoneNumber),
+        rulesTextField.numeric,
+      ]
+    },
     menuProps() {
       return { 'max-width': 200 }
     },

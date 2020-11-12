@@ -1,5 +1,10 @@
 <template>
-  <div class="title-container" data-aos="title-active" data-aos-once="true">
+  <div
+    class="title-container"
+    :style="titleContainerStyle"
+    data-aos="title-active"
+    data-aos-once="true"
+  >
     <div class="icon-container">
       <IconHexagone
         class="primary--text icon outlined"
@@ -22,6 +27,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    titleContainerStyle() {
+      return this.$vuetify.breakpoint.mobile ? { 'max-width': '65%' } : {}
+    },
+  },
+}
+</script>
 
 <style scoped lang="scss">
 .title-container {

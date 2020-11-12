@@ -1,8 +1,11 @@
 <template>
-  <v-menu open-on-hover offset-y left min-width="170px">
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn v-bind="attrs" icon v-on="on">
+  <v-menu open-on-hover offset-y left min-width="170px" z-index="9999">
+    <template v-slot:activator="{ on, attrs, value }">
+      <v-btn v-bind="attrs" text v-on="on">
         <v-icon>mdi-cog</v-icon>
+        <v-icon class="ml-1 menu-chevron" :class="{ open: value }" small
+          >mdi-chevron-down</v-icon
+        >
       </v-btn>
     </template>
 
@@ -25,6 +28,7 @@
           {{ $t('français') }}
         </v-list-item-title>
       </v-list-item>
+
       <v-list-item @click.prevent="switchLanguage('en')">
         <v-list-item-title class="text-capitalize d-flex align-center">
           <IconFlagEn height="20" width="20" class="mr-2" />{{ $t('Anglais') }}
@@ -53,3 +57,12 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.menu-chevron {
+  transition: all 0.4s ease-in-out;
+}
+.menu-chevron.open {
+  transform: rotate(-180deg);
+}
+</style>

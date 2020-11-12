@@ -7,6 +7,9 @@ export default {
   Print: 'Imprimer',
   Presentation: 'Présentation',
   Experiences: 'Expériences',
+  Enterprise: 'Entreprise',
+  'Phone number': 'N° de téléphone',
+  Name: 'Nom',
 
   project_mycodesnippets_description:
     'MyCodeSnippets est une librarie de composants autonomes pour aider les développeurs à créer des \
@@ -64,4 +67,7 @@ export default {
     Contentful, etc... Si vous souhaitez avoir la possibilité de modifier le contenu de votre site facilement et \
     sans passer par un développeur, cette solution est la votre. Contrairement à Wordpress, le Front-End sera \
     totalement indépendant et le choix de la technologie est libre.",
+
+  contact_message_sent_success:
+    'Message envoyé! Je vous remercie, je vous recontacte le plus rapidement possible',
 }
