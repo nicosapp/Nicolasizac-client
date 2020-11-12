@@ -12,7 +12,7 @@
         }}</NavigationButton>
       </v-col>
       <v-col cols="2" class="d-flex justify-center">
-        <v-img src="/icon.png" max-height="40" max-width="40"></v-img>
+        <v-img src="/icon.png" max-height="70" max-width="70"></v-img>
       </v-col>
       <v-col cols="2" class="d-flex justify-center">
         <NavigationButton style="font-size: 1.1rem" to="tech-profile">{{

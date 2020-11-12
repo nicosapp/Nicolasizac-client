@@ -13,8 +13,14 @@
       <ServiceCmsIntegration :reverse="true" />
       <v-divider class="bg-second" style="min-height: 3px"></v-divider>
       <div class="d-flex justify-center py-16">
-        <v-btn color="primary" class="text-capitalize"
-          >{{ $t('Contact-me') }} <v-icon>mdi-arrow-right</v-icon></v-btn
+        <v-btn
+          style="font-size: 1.2rem"
+          class="text-capitalize bg-gradient-primary"
+          large
+          dark
+          to="contact"
+          >{{ $t('Contact-me') }}
+          <v-icon class="mr-2">mdi-arrow-right-thick</v-icon></v-btn
         >
       </div>
     </v-container>

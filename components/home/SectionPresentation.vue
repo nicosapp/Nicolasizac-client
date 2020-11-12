@@ -40,10 +40,11 @@
           <div class="scroll-animation-wrapper" :style="scrollAnimationStyle">
             <IconHexagone
               data-aos="presentation-animation"
-              class="bg-icon accent--text"
+              class="bg-icon"
               height="400"
               width="400"
               :fill="true"
+              :gradient="true"
             />
           </div>
         </div>
@@ -76,7 +77,7 @@ export default {
   methods: {
     handleScroll(e) {
       this.scaleValue = 1 + window.scrollY / 200
-      this.rotateValue = window.scrollY / 10
+      this.rotateValue = -window.scrollY / 10
     },
   },
 }

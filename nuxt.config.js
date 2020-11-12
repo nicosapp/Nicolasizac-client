@@ -149,7 +149,8 @@ export default {
           'bg-second': '#303144',
         },
         light: {
-          primary: '#03A678',
+          // primary: '#03A678',
+          primary: '#22c1c3',
           accent: colors.grey.lighten2,
           bg: '#FFFFFF',
           'bg-second': '#F5F5F5',

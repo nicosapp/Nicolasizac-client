@@ -28,18 +28,19 @@ a {
   }
 }
 .bg-gradient-primary {
-  background: linear-gradient(
-    hsl(
-      hue($color-primary),
-      saturation($color-primary),
-      lightness($color-primary)
-    ),
-    hsl(
-      hue($color-primary),
-      saturation($color-primary),
-      lightness($color-primary) + 10%
-    )
-  ) !important;
+  // background: linear-gradient(
+  //   hsl(
+  //     hue($color-primary),
+  //     saturation($color-primary),
+  //     lightness($color-primary)
+  //   ),
+  //   hsl(
+  //     hue($color-primary),
+  //     saturation($color-primary),
+  //     lightness($color-primary) + 10%
+  //   )
+  // )
+  background: linear-gradient(90deg, #22c1c3 15%, #ffae00 100%) !important;
 }
 
 // .v-application {

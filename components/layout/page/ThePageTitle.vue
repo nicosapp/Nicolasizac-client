@@ -5,6 +5,7 @@
         class="primary--text icon outlined"
         height="120"
         width="120"
+        :gradient="true"
       />
       <IconHexagone
         class="accent--text icon filled"

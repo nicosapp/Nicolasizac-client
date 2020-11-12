@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar class="bg" :clipped-left="false" fixed app>
+  <v-app-bar class="bg px-10" :clipped-left="false" fixed app>
     <nuxt-link to="/">
       <v-img src="/icon.png" :max-height="logoHeight" :max-width="logoHeight">
       </v-img>
@@ -17,14 +17,10 @@
     </NavigationButton>
 
     <!-- <NavigationButton to="blog">{{ $t('Blog') }}</NavigationButton> -->
-    <NavigationButton
-      to="contact"
-      class="bg-gradient-primary ml-2"
-      :dark="true"
-    >
+    <v-btn dark to="contact" class="text-capitalize bg-gradient-primary ml-2">
       <v-icon class="mr-2">mdi-email</v-icon>
       {{ $t('Contact-me') }}
-    </NavigationButton>
+    </v-btn>
   </v-app-bar>
 </template>
 
