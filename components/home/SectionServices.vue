@@ -1,11 +1,11 @@
 <template>
   <TheSection bg-class="bg-second">
     <TheSectionTitle class="mb-8">{{ $t('Services') }}</TheSectionTitle>
-    <p>
+    <div class="mb-4 mx-4 text-center text-justify">
       {{ $t('service_short_description') }}
-    </p>
-    <v-row data-aos="fade-up">
-      <v-col cols="12" md="6">
+    </div>
+    <v-row>
+      <v-col cols="12" md="6" data-aos="fade-up">
         <v-card class="service-card first">
           <v-card-title>Frontend</v-card-title>
           <v-card-text>
@@ -13,7 +13,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" data-aos="fade-up">
         <v-card class="service-card second">
           <v-card-title>Backend</v-card-title>
           <v-card-text>
@@ -22,8 +22,8 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row data-aos="fade-up">
-      <v-col cols="12" md="6">
+    <v-row>
+      <v-col cols="12" md="6" data-aos="fade-up">
         <v-card class="service-card third">
           <v-card-title>Mobile</v-card-title>
           <v-card-text>
@@ -31,7 +31,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" data-aos="fade-up">
         <v-card class="service-card fourth">
           <v-card-title>CMS Integration</v-card-title>
           <v-card-text>
@@ -41,15 +41,18 @@
       </v-col>
     </v-row>
     <v-row style="width: 100%" data-aos="fade-up">
-      <v-col cols="12" class="px-0">
+      <v-col cols="12" class="px-4 px-sm-0">
         <v-card class="service-card bg">
           <v-card-title class="d-flex justify-center mb-3">
             {{ $t('Skills') }}
           </v-card-title>
-          <v-card-text class="d-flex justify-space-around">
+          <v-card-text
+            class="d-flex justify-space-around flex-wrap flex-sm-nowrap"
+          >
             <v-img
               v-for="techno in technologies"
               :key="techno.name"
+              class="ma-3 ma-sm-0"
               :src="require(`~/assets/images/technologies/${techno.path}`)"
               :lazy-src="require(`~/assets/images/technologies/${techno.path}`)"
               contain
@@ -93,13 +96,15 @@ export default {
 <style scoped lang="scss">
 .v-card__text {
   font-size: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .v-card__title {
   font-weight: 800;
   font-size: 2.2rem;
 }
 .service-card {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 1rem;
   height: 100%;
   &.first {

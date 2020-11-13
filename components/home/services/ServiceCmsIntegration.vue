@@ -1,9 +1,11 @@
 <template>
-  <ServiceTemplate :reverse="reverse">
+  <ServiceTemplate :text-left="textLeft">
     <template v-slot:image> image </template>
     <template v-slot:description>
       <TheSectionTitle class="mb-8">CMS Integration</TheSectionTitle>
-      {{ $t('service_cmsintegration_description') }}
+      <div class="text-justify">
+        {{ $t('service_cmsintegration_description') }}
+      </div>
     </template>
   </ServiceTemplate>
 </template>
@@ -11,10 +13,10 @@
 <script>
 export default {
   props: {
-    reverse: {
+    textLeft: {
       type: Boolean,
       required: false,
-      default: false,
+      default: true,
     },
   },
 }

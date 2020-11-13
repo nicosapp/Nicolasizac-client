@@ -2,14 +2,19 @@
   <ThePageTemplate class="bg">
     <template v-slot:header>
       <ThePageHeader :title="$t('Contact')">
-        <template v-slot:image> Image </template>
+        <!-- <template v-slot:image> Image </template> -->
       </ThePageHeader>
     </template>
 
     <template v-slot:default>
-      <v-row>
+      <v-row class="py-16">
         <v-col cols="12" md="4">
-          <p class="text-h4 font-weight-bold">{{ $t('Contact info') }}</p>
+          <p
+            class="text-h4 font-weight-bold"
+            :class="{ 'text-center': $vuetify.breakpoint.mobile }"
+          >
+            {{ $t('Contact info') }}
+          </p>
           <v-list dense>
             <v-list-item>
               <v-list-item-icon

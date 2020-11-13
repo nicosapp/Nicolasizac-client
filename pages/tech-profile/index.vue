@@ -2,7 +2,7 @@
   <ThePageTemplate :container="false">
     <template v-slot:header>
       <ThePageHeader :title="$t('Tech profile')" :title-left="false">
-        <template v-slot:image> Image </template>
+        <!-- <template v-slot:image> Image </template> -->
         <template v-slot:subtitle>
           <div
             class="d-flex"

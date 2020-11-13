@@ -7,8 +7,8 @@
           class="d-flex justify-end font-weight-bold pa-2"
           style="font-size: 0.8rem"
         >
-          © {{ year }} | Nicolas Izac | Site web réalisé avec VueJS, NuxtJS,
-          Laravel & MySQL
+          © {{ year }} | Nicolas Izac | {{ $t('Site web réalisé avec') }} VueJS,
+          NuxtJS, Laravel & MySQL
         </v-col>
       </v-row>
     </TheContainer>

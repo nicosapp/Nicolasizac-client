@@ -2,7 +2,7 @@
   <ThePageTemplate>
     <template v-slot:header>
       <ThePageHeader :title="$t('Projects')">
-        <template v-slot:image> Image </template>
+        <!-- <template v-slot:image> Image </template> -->
         <template v-slot:subtitle>
           <div
             class="d-flex"

@@ -2,7 +2,7 @@
   <div class="niz-tel-text-field d-flex align-center">
     <v-select
       v-model="dialCode"
-      style="max-width: 150px"
+      style="flex: 0 1"
       :items="countries"
       :label="$t('Country code')"
       filled

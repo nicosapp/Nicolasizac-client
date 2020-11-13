@@ -1,7 +1,7 @@
 <template>
   <ProjectTemplate
     :bg-class="bgClass"
-    :reverse="false"
+    :text-first="false"
     title="MyVoc"
     link-github-client="https://github.com/nicosapp/Myvoc-client"
     link-github-backend="https://github.com/nicosapp/Myvoc-api"

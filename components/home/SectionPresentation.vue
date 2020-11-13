@@ -86,6 +86,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.primary--text {
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
+}
 .icon-wrapper {
   position: absolute;
   left: 50%;

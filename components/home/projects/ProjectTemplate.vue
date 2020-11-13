@@ -1,14 +1,14 @@
 <template>
-  <v-card class="py-4 px-8" :class="`${bgClass}`">
+  <v-card class="py-4 px-3 px-sm-8 mx-4 mx-sm-0" :class="`${bgClass}`">
     <v-row :class="{ 'flex-row-reverse': reverse }">
-      <v-col cols="12" md="7">
-        <slot name="images" />
-      </v-col>
       <v-col cols="12" md="5">
         <div class="font-weight-bold mb-4" style="font-size: 2rem">
           {{ title }}
         </div>
-        <slot />
+        <div class="text-justify">
+          <slot />
+        </div>
+
         <div class="mt-4 font-weight-bold">
           <div v-if="linkGithubBackend || linkGithubClient" class="mb-2">
             <template v-if="linkGithubBackend && linkGithubClient">
@@ -54,6 +54,10 @@
           </div>
         </div>
       </v-col>
+
+      <v-col cols="12" md="7">
+        <slot name="images" />
+      </v-col>
     </v-row>
   </v-card>
 </template>
@@ -66,10 +70,10 @@ export default {
       type: String,
       default: 'bg',
     },
-    reverse: {
+    textFirst: {
       type: Boolean,
       required: false,
-      default: false,
+      default: true,
     },
     title: {
       required: true,
@@ -94,6 +98,11 @@ export default {
       required: false,
       type: Array,
       default: () => [],
+    },
+  },
+  computed: {
+    reverse() {
+      return this.$vuetify.breakpoint.mobile ? false : !this.textFirst
     },
   },
 }

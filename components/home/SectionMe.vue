@@ -2,7 +2,7 @@
   <TheSection bg-class="bg">
     <v-row justify="center" align="center" :style="flexStyle">
       <v-col cols="12" md="6" data-aos="fade-up">
-        <p class="mb-8">
+        <p class="mb-8 mx-2 mx-sm-0 text-justify">
           Passionné depuis toujours par le secteur du web, je suis un
           développeur autodidacte.
           <br /><br />
@@ -20,7 +20,6 @@
         >
           <div>
             <v-btn
-              depressed
               color="primary"
               :class="{ 'mb-8': $vuetify.breakpoint.mobile }"
               dark
@@ -30,7 +29,7 @@
             </v-btn>
           </div>
           <div>
-            <v-btn outlined
+            <v-btn color="secondary"
               >{{ $t('Profile technique') }}
               <v-icon class="ml-1">mdi-arrow-right-thick</v-icon>
             </v-btn>

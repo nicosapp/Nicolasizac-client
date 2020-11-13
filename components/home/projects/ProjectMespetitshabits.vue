@@ -1,7 +1,7 @@
 <template>
   <ProjectTemplate
     :bg-class="bgClass"
-    :reverse="true"
+    :text-first="true"
     title="MesPetitsHabits"
     link-demo="https://mespetitshabits.fr"
     :chips="chips"

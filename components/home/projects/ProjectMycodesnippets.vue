@@ -1,7 +1,7 @@
 <template>
   <ProjectTemplate
     :bg-class="bgClass"
-    :reverse="true"
+    :text-first="true"
     title="MyCodeSnippets"
     link-github-client="https://github.com/nicosapp/Mycodesnippets-client"
     link-github-backend="https://github.com/nicosapp/Mycodesnippets-api"

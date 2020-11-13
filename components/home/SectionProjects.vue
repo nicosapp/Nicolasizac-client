@@ -1,7 +1,7 @@
 <template>
   <TheSection>
     <TheSectionTitle class="mb-4">{{ $t('Projects') }}</TheSectionTitle>
-    <v-tabs v-model="tab" background-color="transparent">
+    <v-tabs v-model="tab" background-color="transparent" center-active>
       <v-tab v-for="item in items" :key="item.name">
         {{ item.name }}
       </v-tab>

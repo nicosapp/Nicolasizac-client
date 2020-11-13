@@ -1,19 +1,19 @@
 <template>
-  <ThePageTemplate>
+  <ThePageTemplate class="bg">
     <template v-slot:header>
       <ThePageHeader :title="$t('Services')">
-        <template v-slot:image> Image </template>
+        <!-- <template v-slot:image> Image </template> -->
       </ThePageHeader>
     </template>
 
     <template v-slot:default>
       <ServiceFrontend />
       <v-divider class="bg-second" style="min-height: 3px"></v-divider>
-      <ServiceBackend :reverse="true" />
+      <ServiceBackend :text-left="false" />
       <v-divider class="bg-second" style="min-height: 3px"></v-divider>
       <ServiceMobile />
       <v-divider class="bg-second" style="min-height: 3px"></v-divider>
-      <ServiceCmsIntegration :reverse="true" />
+      <ServiceCmsIntegration :text-left="false" />
       <v-divider class="bg-second" style="min-height: 3px"></v-divider>
       <div class="d-flex justify-center py-16">
         <v-btn

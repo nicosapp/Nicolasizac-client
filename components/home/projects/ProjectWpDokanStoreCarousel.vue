@@ -4,7 +4,7 @@
     link-github-client="https://github.com/nicosapp/niz_dokansc"
     link-demo="https://fr.wordpress.org/plugins/niz-stores-carousel-for-dokan/"
     :bg-class="bgClass"
-    :reverse="true"
+    :text-first="true"
   >
     {{ $t('project_dokanstorecarousel_description') }}
 
