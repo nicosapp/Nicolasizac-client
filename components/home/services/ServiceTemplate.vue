@@ -3,7 +3,7 @@
     <v-col cols="12" md="6">
       <slot name="description" />
     </v-col>
-    <v-col cols="12" md="6">
+    <v-col cols="12" md="6" class="d-flex justify-center">
       <slot name="image" />
     </v-col>
   </v-row>

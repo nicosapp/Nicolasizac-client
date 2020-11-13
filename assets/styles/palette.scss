@@ -2,6 +2,7 @@
   @return red($hex), green($hex), blue($hex);
 }
 $color-primary: #22c1c3;
+$color-secondary: #d1af38;
 $color-rating: #eceff1;
 $color-highlight: #ffca28;
 $color-crossdico: #a5d6a7;
@@ -14,3 +15,18 @@ $color-appbar: #f5f5f5;
   --color-highlight: #{$color-highlight};
   --color-crossdico: #{$color-crossdico};
 }
+.dark {
+  --color-appbar: #{$color-appbar};
+  --color-primary: #{$color-primary};
+  --color-primary--rgb: #{hextorgb($color-primary)};
+  --color-rating: #{$color-rating};
+  --color-highlight: #{$color-highlight};
+  --color-crossdico: #{$color-crossdico};
+}
+
+$bg-gradient-primary: linear-gradient(90deg, #22c1c3 15%, #ffae00 100%);
+
+//vuetify
+// @import '~vuetify/src/styles/styles.sass';
+
+// $color-icon-inactive: #{map-get(map-get($material-light, 'icons'), 'inactive')};

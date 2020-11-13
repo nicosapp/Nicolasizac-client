@@ -110,16 +110,12 @@ export default {
 
 <style lang="scss">
 @import './assets/sprite.css';
-@import '~vuetify/src/styles/styles.sass';
 
 .niz-tel-text-field {
   .v-select .v-input__slot {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
-    border-right: solid 1px #{map-get(
-        map-get($material-light, 'icons'),
-        'inactive'
-      )} !important;
+    border-right: solid 1px var(--v-icon-active-base) !important;
   }
   .v-text-field .v-input__slot {
     border-top-left-radius: 0 !important;

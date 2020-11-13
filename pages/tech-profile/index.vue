@@ -1,26 +1,13 @@
 <template>
   <ThePageTemplate :container="false">
     <template v-slot:header>
-      <ThePageHeader :title="$t('Tech profile')" :title-left="false">
+      <ThePageHeader
+        :title="$t('Tech profile')"
+        :title-left="false"
+        :chips="headerLinks"
+        :references="$refs"
+      >
         <!-- <template v-slot:image> Image </template> -->
-        <template v-slot:subtitle>
-          <div
-            class="d-flex"
-            :class="[{ 'flex-column': $vuetify.breakpoint.mobile }]"
-          >
-            <v-btn
-              v-for="p in headerLinks"
-              :key="p.link"
-              rounded
-              outlined
-              depressed
-              class="text-capitalize mx-3"
-              :class="[{ 'mb-2': $vuetify.breakpoint.mobile }]"
-              @click="$vuetify.goTo($refs[p.link], options)"
-              >{{ p.name }}</v-btn
-            >
-          </div>
-        </template>
       </ThePageHeader>
     </template>
 
@@ -50,14 +37,10 @@ export default {
       ],
     }
   },
-  computed: {
-    options() {
-      return {
-        duration: 1000,
-        offset: 0,
-        easing: 'easeOutCubic',
-      }
-    },
+  head() {
+    return {
+      title: this.$i18n.t('Tech profile'),
+    }
   },
 }
 </script>

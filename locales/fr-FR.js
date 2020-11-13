@@ -68,6 +68,43 @@ export default {
     sans passer par un développeur, cette solution est la votre. Contrairement à Wordpress, le Front-End sera \
     totalement indépendant et le choix de la technologie est libre.",
 
+  experience_freelance_introduction:
+    '__Freelance Fullstack developer__ spécialisé dans les frameworks NuxtJS & Laravel',
+  experience_freelance_task_1:
+    '__Oct. 2020 - Nov. 2020__ - MyVoc - Fullstack Developer | Laravel & NuxtJS',
+  experience_freelance_task_2:
+    '__Sept. 2020 - Oct. 2020__ - MyCodeSnippets - Fullstack Developer | Laravel & NuxtJS',
+  experience_freelance_task_3:
+    '__Mai. 2020 - Sept. 2020__ - MesPetitsHabits - Fullstack Developer | Wordpress & Jquery',
+
+  experience_ge_introduction:
+    '__Advanced Manufacturer Engineer (AME)__ pour la modalité Advantage Windows',
+  experience_ge_task_1:
+    "Coordinateur des équipes DFM, Material, Production, Sourcing et OFS \
+    en vue de l'introduction de nouveaux produits (NPI Make/Buy) en \
+    respectant les Jalons Programme et en suivant le process d’ECR/ECO.",
+  experience_ge_task_2:
+    'Pilote des revues de conception sur la gamme de produit',
+  experience_ge_task_3:
+    'Suivi de l’avancement des projets avec les fournisseurs.',
+  experience_ge_task_4:
+    'Mise en place aux US du nouveau process eDelivery de distribution \
+    virtuelle des produits AW',
+
+  experience_staubli_introduction:
+    'Gestion d’un portfolio de projets liés aux 3 ateliers de \
+    production de Stäubli Lyon (Machines jacquard, Harnais, Composants)',
+  experience_staubli_task_1:
+    'AVP de la nouvelle installation pour la machine \
+    spéciale de rentrage (100 000€).',
+  experience_staubli_task_2:
+    'Mise en place d’un masque paramétrable sous Catia V5 (R14).',
+
+  experience_bmw_introduction:
+    'Mise en place en amont du cycle en V d’une méthode numérique de \
+    mesure acoustique dans le secteur automobile pour compléter les \
+    méthodes expérimentales actuelles.',
+
   contact_message_sent_success:
     'Message envoyé! Je vous remercie, je vous recontacte le plus rapidement possible',
 }

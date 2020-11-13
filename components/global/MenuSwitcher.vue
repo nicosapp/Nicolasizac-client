@@ -1,9 +1,20 @@
 <template>
-  <v-menu open-on-hover offset-y left min-width="170px" z-index="9999">
+  <v-menu
+    open-on-hover
+    offset-y
+    left
+    min-width="170px"
+    z-index="9999"
+    transition="scroll-y-transition"
+  >
     <template v-slot:activator="{ on, attrs, value }">
       <v-btn v-bind="attrs" text v-on="on">
-        <v-icon>mdi-cog</v-icon>
-        <v-icon class="ml-1 menu-chevron" :class="{ open: value }" small
+        <v-icon color="icon-active">mdi-cog</v-icon>
+        <v-icon
+          class="ml-1 menu-chevron"
+          color="icon-active"
+          :class="{ open: value }"
+          small
           >mdi-chevron-down</v-icon
         >
       </v-btn>

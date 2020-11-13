@@ -1,8 +1,10 @@
 <template>
   <div>
-    <TheContainer>
-      <slot name="header" />
-    </TheContainer>
+    <div :class="`${bgHeader}`">
+      <TheContainer>
+        <slot name="header" />
+      </TheContainer>
+    </div>
     <TheContainer v-if="container">
       <slot />
     </TheContainer>
@@ -19,6 +21,11 @@ export default {
       required: false,
       default: true,
       type: Boolean,
+    },
+    bgHeader: {
+      required: false,
+      type: String,
+      default: 'bg-second',
     },
   },
 }

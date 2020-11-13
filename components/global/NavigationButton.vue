@@ -1,11 +1,5 @@
 <template>
-  <v-btn
-    text
-    :dark="dark"
-    active-class="nav-btn-active"
-    class="text-capitalize"
-    :to="to"
-  >
+  <v-btn text :dark="dark" class="text-capitalize" :to="to">
     <div style="position: relative">
       <IconHexagone
         class="bg-icon"
@@ -51,12 +45,19 @@ export default {
   transform: translate(-50%, -50%);
   opacity: 0;
 }
-.nav-btn-active {
-  &::before {
-    background: unset !important;
+.v-btn {
+  color: var(--v-icon-active-base);
+  &:hover {
+    color: var(--v-icon-body-color-base);
   }
-  .bg-icon {
-    opacity: 0.7;
+  &.v-btn--active {
+    color: var(--v-icon-body-color-base);
+    &::before {
+      background: unset !important;
+    }
+    .bg-icon {
+      opacity: 0.7;
+    }
   }
 }
 </style>

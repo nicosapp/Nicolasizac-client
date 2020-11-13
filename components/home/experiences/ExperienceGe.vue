@@ -5,7 +5,7 @@
     enterprise-link="https://www.gehealthcare.fr/"
     :date="`Nov 2018,  ${$t('Jul')} 2020`"
     :button-name="$t('Details')"
-    button-link="/projects"
+    :chips="chips"
   >
     <template v-slot:header>
       <div>
@@ -17,14 +17,16 @@
         ></v-img>
       </div>
     </template>
-    <template v-slot:content> </template>
-    <template v-slot:bottom>
-      <v-chip-group column>
-        <v-chip v-for="item in chips" :key="item" class="font-weight-medium">
-          {{ item }}
-        </v-chip>
-      </v-chip-group>
+    <template v-slot:content>
+      <div v-html="$md($t('experience_ge_introduction'), 'inline')"></div>
     </template>
+    <template v-slot:details>
+      <div v-for="index in 4" :key="index" class="d-flex align-start mb-3">
+        <v-icon small>mdi-chevron-right</v-icon>
+        <div v-html="$md($t(`experience_ge_task_${index}`), 'inline')" />
+      </div>
+    </template>
+    <template v-slot:bottom> </template>
   </ExperienceTemplate>
 </template>
 

@@ -14,6 +14,7 @@
             <template v-if="linkGithubBackend && linkGithubClient">
               <a
                 v-if="linkGithubClient"
+                class="secondary--text"
                 target="_blank"
                 :href="linkGithubClient"
               >
@@ -22,6 +23,7 @@
               /
               <a
                 v-if="linkGithubBackend"
+                class="secondary--text"
                 target="_blank"
                 :href="linkGithubBackend"
               >
@@ -30,6 +32,7 @@
             </template>
             <a
               v-else-if="linkGithubClient"
+              class="secondary--text"
               target="_blank"
               :href="linkGithubClient"
             >
@@ -37,7 +40,12 @@
             </a>
           </div>
 
-          <a v-if="linkDemo" target="_blank" class="d-block" :href="linkDemo">
+          <a
+            v-if="linkDemo"
+            target="_blank"
+            class="d-block secondary--text"
+            :href="linkDemo"
+          >
             Demo / Documentation
           </a>
           <div v-if="chips.length" class="mt-4">

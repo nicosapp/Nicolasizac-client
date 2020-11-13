@@ -161,5 +161,10 @@ export default {
       this.loading = false
     },
   },
+  head() {
+    return {
+      title: this.$i18n.t('Contact'),
+    }
+  },
 }
 </script>

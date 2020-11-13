@@ -4,8 +4,7 @@
     enterprise-name="BMW"
     enterprise-link="https://www.bmw.fr/fr/accueil.html"
     :date="`${$t('Feb')} 2018, ${$t('Aug')} 2018`"
-    :button-name="$t('Details')"
-    button-link="/projects"
+    :chips="chips"
   >
     <template v-slot:header>
       <div>
@@ -18,14 +17,10 @@
         ></v-img>
       </div>
     </template>
-    <template v-slot:content> </template>
-    <template v-slot:bottom>
-      <v-chip-group column>
-        <v-chip v-for="item in chips" :key="item" class="font-weight-medium">
-          {{ item }}
-        </v-chip>
-      </v-chip-group>
+    <template v-slot:content>
+      <div v-html="$md($t('experience_bmw_introduction'), 'inline')"></div>
     </template>
+    <template v-slot:bottom> </template>
   </ExperienceTemplate>
 </template>
 

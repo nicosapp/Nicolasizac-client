@@ -7,7 +7,7 @@
   >
     <div class="icon-container">
       <IconHexagone
-        class="primary--text icon outlined"
+        class="icon outlined"
         height="120"
         width="120"
         :gradient="true"

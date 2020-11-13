@@ -1,6 +1,5 @@
 @import 'palette';
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
 @import '~vuetify/src/styles/styles.sass';
 @media #{map-get($display-breakpoints,'md-and-down')} {
@@ -35,9 +34,9 @@ a {
   }
 }
 .bg-gradient-primary {
-  background: linear-gradient(90deg, #22c1c3 15%, #ffae00 100%) !important;
+  background: $bg-gradient-primary !important;
 }
 
-// .v-application {
-//   font-family: 'Patrick Hand', cursive !important;
-// }
+.v-application {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}

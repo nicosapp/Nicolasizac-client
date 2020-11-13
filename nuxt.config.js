@@ -33,6 +33,7 @@ export default {
     '~/plugins/notifier',
     '~/plugins/dialog',
     '~/plugins/alert',
+    '~/plugins/markdown',
     '~/plugins/aos',
   ],
 
@@ -136,10 +137,11 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
+      options: { customProperties: true },
       themes: {
         dark: {
           primary: '#22c1c3',
-          accent: colors.grey.darken3,
+          accent: '#a2a2a2',
           secondary: '#d1af38',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
@@ -147,14 +149,19 @@ export default {
           success: colors.green.accent3,
           bg: '#21222e',
           'bg-second': '#303144',
+          'body-color': '#FFFFFF',
+          'icon-active': '#a2a2a2',
+          'icon-inactive': '#ffffff8a',
         },
         light: {
-          // primary: '#03A678',
           primary: '#22c1c3',
-          secondary: '#ffae00',
+          secondary: '#d1af38',
           accent: colors.grey.lighten2,
           bg: '#FFFFFF',
           'bg-second': '#F5F5F5',
+          'body-color': '#000000de',
+          'icon-active': '#7d7d7d',
+          'icon-inactive': '#c7c7c7',
         },
       },
     },

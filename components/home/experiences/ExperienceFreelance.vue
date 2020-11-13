@@ -1,22 +1,33 @@
 <template>
   <ExperienceTemplate
-    :button-name="$t('Details')"
-    button-link="/projects"
+    :button-name="$t('Projects')"
     title="Freelance Full Stack Developper"
     enterprise-name="Freelance"
     :date="`Oct 2019, ${$t('Now')}`"
+    :chips="chips"
   >
     <template v-slot:header>
-      <v-icon large>mdi-email</v-icon>
+      <v-img
+        lazy-src="/icon.png"
+        src="/icon.png"
+        max-height="60px"
+        contain
+      ></v-img>
     </template>
-    <template v-slot:content> </template>
-    <template v-slot:bottom>
-      <v-chip-group column>
-        <v-chip v-for="item in chips" :key="item" class="font-weight-medium">
-          {{ item }}
-        </v-chip>
-      </v-chip-group>
+    <template v-slot:content>
+      <div
+        v-html="$md($t('experience_freelance_introduction'), 'inline')"
+      ></div>
     </template>
+    <template v-slot:details>
+      <div
+        v-for="index in 3"
+        :key="index"
+        class="mb-3"
+        v-html="$md($t(`experience_freelance_task_${index}`), 'inline')"
+      ></div>
+    </template>
+    <template v-slot:bottom> </template>
   </ExperienceTemplate>
 </template>
 
