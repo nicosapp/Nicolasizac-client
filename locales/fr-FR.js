@@ -2,6 +2,7 @@
 export default {
   'Contact-me': 'Contactez-moi',
   Projects: 'Projets',
+  Profile: 'Profil',
   'Tech profile': 'Profil technique',
   'All services': 'Tous les services',
   Print: 'Imprimer',

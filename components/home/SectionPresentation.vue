@@ -21,10 +21,12 @@
         <div class="text-h5 mb-14" data-aos="fade-up" data-aos-once="true">
           {{ $t('Spécialisé front-end avec') }}
 
-          <span class="font-weight-bold primary--text">Vue.JS & Nuxt.JS</span>
+          <span class="font-weight-bold" :class="firstLineClass"
+            >Vue.JS & Nuxt.JS</span
+          >
           <br />
           {{ $t('et back-end avec') }}
-          <span class="font-weight-bold primary--text">Laravel</span>
+          <span class="font-weight-bold" :class="secondLineClass">Laravel</span>
         </div>
         <v-btn
           data-aos="fade-up"
@@ -69,6 +71,14 @@ export default {
         transform: `scale(${this.scaleValue}) rotate(${this.rotateValue}deg)`,
       }
     },
+    firstLineClass() {
+      if (this.$vuetify.breakpoint.mobile && this.scaleValue > 1.4)
+        return 'white--text'
+      return 'primary--text'
+    },
+    secondLineClass() {
+      return this.$vuetify.breakpoint.mobile ? 'white--text' : 'primary--text'
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
@@ -86,9 +96,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.primary--text {
-  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff;
-}
 .icon-wrapper {
   position: absolute;
   left: 50%;

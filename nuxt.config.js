@@ -89,11 +89,11 @@ export default {
       source: './static/icon.png',
     },
     manifest: {
-      name: 'MyVoc',
-      short_name: 'MyVoc',
-      lang: 'en',
-      display: 'fullscreen',
-      background_color: '#03A678',
+      name: 'Niz',
+      short_name: 'Niz',
+      lang: 'fr',
+      display: 'standalone',
+      background_color: '#fff',
     },
   },
   // Auth module configuration

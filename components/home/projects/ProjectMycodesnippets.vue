@@ -15,7 +15,12 @@
         <v-col cols="12" md="6">
           <ProjectImage src="mycodesnippets-1.JPG" />
         </v-col>
-        <v-col cols="12" md="6" class="d-flex flex-column justify-space-around">
+        <v-col
+          cols="12"
+          md="6"
+          class="d-flex flex-column justify-space-around"
+          :class="{ 'px-0': $vuetify.breakpoint.mobile }"
+        >
           <v-col class="pt-0">
             <ProjectImage src="mycodesnippets-3.JPG" />
           </v-col>

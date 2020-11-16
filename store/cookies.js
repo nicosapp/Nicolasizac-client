@@ -1,5 +1,5 @@
 export const state = () => ({
-  visible: false,
+  visible: true,
 })
 
 export const getters = {
