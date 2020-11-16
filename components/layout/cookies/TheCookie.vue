@@ -14,7 +14,7 @@
         </div>
         <div class="flex-grow-1 text-justify px-3">
           <div
-            class="d-flex justify-space-between"
+            class="d-flex justify-space-between align-center"
             :class="{ 'flex-column': $vuetify.breakpoint.mobile }"
           >
             <div>
@@ -22,15 +22,15 @@
               <PrivacyDialog> {{ $t('privacy_policy_link') }}</PrivacyDialog>
               {{ $t('cookies_sentence_after') }}
             </div>
-          </div>
-          <div
-            class="text-center"
-            :class="{ 'mt-2': $vuetify.breakpoint.mobile }"
-          >
-            <v-btn color="primary" @click="accept">
-              {{ $t('accept') }}
-            </v-btn>
-            <v-btn text @click="refuse"> {{ $t('refuse') }} </v-btn>
+            <div
+              class="text-center"
+              :class="{ 'mt-2': $vuetify.breakpoint.mobile }"
+            >
+              <v-btn color="primary" @click="accept">
+                {{ $t('accept') }}
+              </v-btn>
+              <v-btn text @click="refuse"> {{ $t('refuse') }} </v-btn>
+            </div>
           </div>
         </div>
       </div>
