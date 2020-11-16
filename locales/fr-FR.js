@@ -11,6 +11,25 @@ export default {
   'Phone number': 'N° de téléphone',
   Name: 'Nom',
 
+  // presentation
+  'Spécialisé front-end avec': 'Front-end expert with',
+  'Go to projects': 'Voir les projets',
+  'Profil technique': 'Tech profile',
+
+  // section me
+  section_me_firstline:
+    'Passionné depuis toujours par le secteur du web, je suis un \
+    développeur autodidacte.',
+
+  section_me_description:
+    "Après plusieurs expériences en start-up, je suis aujourd'hui \
+    développeur freelance, je partage mon temps entre les missions et les \
+    projets Open-Source. Spécialisé dans les langages et framework JS et \
+    Typescript, je suis expert en Front-End avec Vue.JS/Nuxt.JS et \
+    React.JS avec de solides compétences en Node.JS, Docker et bien \
+    d'autres. Je vous laisse voir mon parcours, mes projets et mes \
+    compétences ci-dessous.",
+
   project_mycodesnippets_description:
     'MyCodeSnippets est une librarie de composants autonomes pour aider les développeurs à créer des \
     interfaces avancées avec Vue.JS et Nuxt.JS. Tous les composants gèrent le thème dark et \

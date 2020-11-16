@@ -16,10 +16,10 @@
           data-aos-once="true"
           style="font-size: 2.5rem !important"
         >
-          {{ $t('Freelance fullstack Js/PHP développeur') }}
+          {{ $t('Freelance fullstack Js/PHP developper') }}
         </div>
         <div class="text-h5 mb-14" data-aos="fade-up" data-aos-once="true">
-          {{ $t('Spécialisé font-end avec') }}
+          {{ $t('Spécialisé front-end avec') }}
 
           <span class="font-weight-bold primary--text">Vue.JS & Nuxt.JS</span>
           <br />
@@ -93,6 +93,9 @@ export default {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  .scroll-animation-wrapper {
+    transition: all 0.3s linear;
+  }
   .bg-icon {
     transition: all 2s ease-in-out;
     opacity: 0;

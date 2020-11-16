@@ -3,16 +3,9 @@
     <v-row justify="center" align="center" :style="flexStyle">
       <v-col cols="12" md="6" data-aos="fade-up">
         <p class="mb-8 mx-2 mx-sm-0 text-justify">
-          Passionné depuis toujours par le secteur du web, je suis un
-          développeur autodidacte.
+          {{ $t('section_me_firstline') }}
           <br /><br />
-          Après plusieurs expériences en start-up, je suis aujourd'hui
-          développeur freelance, je partage mon temps entre les missions et les
-          projets Open-Source. Spécialisé dans les langages et framework JS et
-          Typescript, je suis expert en Front-End avec Vue.JS/Nuxt.JS et
-          React.JS avec de solides compétences en Node.JS, Docker et bien
-          d'autres. Je vous laisse voir mon parcours, mes projets et mes
-          compétences ci-dessous.
+          {{ $t('section_me_description') }}
         </p>
         <div
           class="d-flex justify-space-around align-center"
@@ -24,13 +17,13 @@
               :class="{ 'mb-8': $vuetify.breakpoint.mobile }"
               dark
             >
-              {{ $t('Voir les projets') }}
+              {{ $t('Go to projects') }}
               <v-icon class="ml-1">mdi-arrow-right-thick</v-icon>
             </v-btn>
           </div>
           <div>
             <v-btn color="secondary"
-              >{{ $t('Profile technique') }}
+              >{{ $t('Tech profile') }}
               <v-icon class="ml-1">mdi-arrow-right-thick</v-icon>
             </v-btn>
           </div>

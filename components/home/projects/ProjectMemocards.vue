@@ -45,6 +45,8 @@ export default {
         'Lodash',
         'MomentJS',
         'SortableJS',
+        'Sass',
+        'TailwindCSS',
         'Laravel',
       ],
     }

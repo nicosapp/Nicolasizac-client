@@ -38,14 +38,14 @@
       <div
         v-if="$slots.details"
         style="font-size: 0.8rem"
-        class="lightgrey-text details-container"
+        class="lightgrey-text details-container font-weight-medium"
         :class="[{ open: open }, { 'mt-4': open }]"
       >
         <slot name="details" />
       </div>
     </div>
     <v-divider class="bg-second" style="min-height: 3px"></v-divider>
-    <div class="pa-4 d-flex justify-center align-center">
+    <div class="pa-4 d-flex justify-start align-center">
       <slot name="bottom" />
       <div v-if="chips">
         <v-btn

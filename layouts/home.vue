@@ -29,6 +29,7 @@ export default {
         position: 'fixed',
         bottom: this.$vuetify.breakpoint.mobile ? '80px' : '30px',
         right: '15px',
+        'z-index': 9999,
       }
     },
   },

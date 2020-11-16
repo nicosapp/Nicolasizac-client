@@ -13,6 +13,7 @@
 
     <template v-slot:default>
       <v-btn
+        v-if="false"
         color="primary text-capitalize"
         style="position: fixed; left: 30px; top: 100px; z-index: 10"
       >

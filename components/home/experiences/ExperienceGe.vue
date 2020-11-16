@@ -35,15 +35,16 @@ export default {
   data() {
     return {
       chips: [
-        'Work',
-        'Home Improvement',
-        'Vacation',
-        'Food',
-        'Drawers',
-        'Shopping',
-        'Art',
-        'Tech',
-        'Creative Writing',
+        this.$i18n.t('Manufacturing'),
+        this.$i18n.t('Medical System'),
+        this.$i18n.t('Quality'),
+        this.$i18n.t('Supplier Management'),
+        this.$i18n.t('Risk management'),
+        this.$i18n.t('Priority management'),
+        this.$i18n.t('Reporting'),
+        this.$i18n.t('Team coordination'),
+        this.$i18n.t('Customer &  Goal oriented'),
+        this.$i18n.t('Deadline driven'),
       ],
     }
   },

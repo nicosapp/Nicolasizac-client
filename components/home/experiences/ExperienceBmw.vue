@@ -29,15 +29,10 @@ export default {
   data() {
     return {
       chips: [
-        'Work',
-        'Home Improvement',
-        'Vacation',
-        'Food',
-        'Drawers',
-        'Shopping',
-        'Art',
-        'Tech',
-        'Creative Writing',
+        this.$i18n.t('Research & Development'),
+        this.$i18n.t('Acoustics'),
+        this.$i18n.t('Matlab'),
+        this.$i18n.t('Reporting'),
       ],
     }
   },

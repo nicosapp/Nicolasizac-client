@@ -71,6 +71,7 @@
       color="primary"
       class="mt-4 text-capitalize"
       style="font-size: 1.3rem"
+      :to="{ name: 'services' }"
       >{{ $t('All services') }}
       <v-icon class="ml-2">mdi-chevron-right</v-icon>
     </v-btn>

@@ -35,6 +35,7 @@ export default {
     '~/plugins/alert',
     '~/plugins/markdown',
     '~/plugins/aos',
+    { src: '~/plugins/google-analytics.js', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

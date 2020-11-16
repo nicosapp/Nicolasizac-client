@@ -1,5 +1,5 @@
 @import 'palette';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 @import '~vuetify/src/styles/styles.sass';
 @media #{map-get($display-breakpoints,'md-and-down')} {
@@ -39,4 +39,9 @@ a {
 
 .v-application {
   font-family: 'Roboto Condensed', sans-serif !important;
+  .v-btn,
+  .v-tab,
+  p {
+    font-weight: 700;
+  }
 }

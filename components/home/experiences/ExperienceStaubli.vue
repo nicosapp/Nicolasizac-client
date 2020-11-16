@@ -35,15 +35,14 @@ export default {
   data() {
     return {
       chips: [
-        'Work',
-        'Home Improvement',
-        'Vacation',
-        'Food',
-        'Drawers',
-        'Shopping',
-        'Art',
-        'Tech',
-        'Creative Writing',
+        this.$i18n.t('Manufacturing'),
+        this.$i18n.t('Mechanical engineering'),
+        this.$i18n.t('Mechanical design'),
+        this.$i18n.t('Catia V5'),
+        this.$i18n.t('Supplier Management'),
+        this.$i18n.t('Risk management'),
+        this.$i18n.t('Priority management'),
+        this.$i18n.t('Reporting'),
       ],
     }
   },
