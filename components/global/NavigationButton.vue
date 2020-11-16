@@ -1,5 +1,5 @@
 <template>
-  <v-btn text :dark="dark" class="text-capitalize" :to="to">
+  <v-btn text :dark="dark" class="text-capitalize" :to="{ name: to }">
     <div style="position: relative">
       <IconHexagone
         class="bg-icon"
@@ -21,7 +21,7 @@ export default {
     to: {
       type: [Object, String],
       required: false,
-      default: '/',
+      default: 'index',
     },
     dark: {
       type: Boolean,

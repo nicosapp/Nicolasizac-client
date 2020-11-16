@@ -35,6 +35,7 @@
           dark
           class="bg-gradient-primary text-capitalize"
           style="font-size: 1.2rem"
+          :to="{ name: 'contact' }"
         >
           {{ $t('Contact-me') }}
         </v-btn>

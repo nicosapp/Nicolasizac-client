@@ -26,7 +26,7 @@
 
         <v-btn
           dark
-          to="contact"
+          :to="{ name: 'contact' }"
           class="text-capitalize bg-gradient-primary ml-2"
         >
           <v-icon class="mr-2">mdi-email</v-icon>

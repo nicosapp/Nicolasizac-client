@@ -4,7 +4,7 @@ import VueGtag from 'vue-gtag'
 export default ({ app }) => {
   const getGDPR = localStorage.getItem('GDPR:accepted')
 
-  if (process.env.NODE_ENV !== 'production') return
+  // if (process.env.NODE_ENV !== 'production') return
 
   Vue.use(
     VueGtag,

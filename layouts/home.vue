@@ -8,7 +8,7 @@
       <TheSubFooter />
     </v-main>
     <v-btn
-      to="contact"
+      :to="{ name: 'contact' }"
       class="fab-message bg-gradient-primary"
       :style="fabMessageStyle"
       dark
