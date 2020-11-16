@@ -1,6 +1,15 @@
 <template>
   <ServiceTemplate :text-left="textLeft">
-    <template v-slot:image> image </template>
+    <template v-slot:image>
+      <v-img
+        data-aos="fade-up"
+        data-aos-once="true"
+        :lazy-src="require('~/assets/images/services/backend.svg')"
+        :src="require('~/assets/images/services/backend.svg')"
+        max-width="80%"
+      >
+      </v-img>
+    </template>
     <template v-slot:description>
       <TheSectionTitle class="mb-8">Backend</TheSectionTitle>
       <div class="text-justify">{{ $t('service_backend_description') }}</div>
