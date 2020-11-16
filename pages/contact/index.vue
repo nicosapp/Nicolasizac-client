@@ -163,7 +163,19 @@ export default {
   },
   head() {
     return {
-      title: this.$i18n.t('Contact'),
+      title: this.$i18n.t('pages.contact.title'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$i18n.t('pages.contact.title'),
+          hid: 'og:title',
+        },
+        {
+          property: 'og:description',
+          content: this.$i18n.t('pages.contact.description'),
+          hid: 'og:description',
+        },
+      ],
     }
   },
 }

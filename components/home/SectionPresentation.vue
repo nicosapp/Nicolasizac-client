@@ -19,13 +19,13 @@
           {{ $t('Freelance fullstack Js/PHP developper') }}
         </div>
         <div class="text-h5 mb-14" data-aos="fade-up" data-aos-once="true">
-          {{ $t('Spécialisé front-end avec') }}
+          {{ $t('Front-end expert with') }}
 
           <span class="font-weight-bold" :class="firstLineClass"
             >Vue.JS & Nuxt.JS</span
           >
           <br />
-          {{ $t('et back-end avec') }}
+          {{ $t('and Back-end with') }}
           <span class="font-weight-bold" :class="secondLineClass">Laravel</span>
         </div>
         <v-btn

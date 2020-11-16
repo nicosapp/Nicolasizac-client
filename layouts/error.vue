@@ -1,12 +1,19 @@
 <template>
   <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/"> Home page </NuxtLink>
+    <v-main>
+      <TheContainer class="the-container">
+        <h1 class="text-h3">
+          <template v-if="error.statusCode === 404">
+            {{ pageNotFound }}
+          </template>
+          <template v-else>
+            {{ otherError }}
+          </template>
+        </h1>
+
+        <NuxtLink to="/"> Home page </NuxtLink>
+      </TheContainer>
+    </v-main>
   </v-app>
 </template>
 

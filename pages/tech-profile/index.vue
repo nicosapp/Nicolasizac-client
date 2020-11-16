@@ -21,6 +21,7 @@
       </v-btn>
       <SectionMe ref="presentation" />
       <SectionExperiences ref="experiences" />
+      <SectionEducation ref="education" />
       <SectionServices ref="services" />
     </template>
   </ThePageTemplate>
@@ -34,13 +35,26 @@ export default {
       headerLinks: [
         { name: this.$i18n.t('Presentation'), link: 'presentation' },
         { name: this.$i18n.t('Experiences'), link: 'experiences' },
+        { name: this.$i18n.t('Education'), link: 'education' },
         { name: this.$i18n.t('Services'), link: 'services' },
       ],
     }
   },
   head() {
     return {
-      title: this.$i18n.t('Tech profile'),
+      title: this.$i18n.t('pages.tech_profile.title'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$i18n.t('pages.tech_profile.title'),
+          hid: 'og:title',
+        },
+        {
+          property: 'og:description',
+          content: this.$i18n.t('pages.tech_profile.description'),
+          hid: 'og:description',
+        },
+      ],
     }
   },
 }

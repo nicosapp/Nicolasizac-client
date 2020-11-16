@@ -1,7 +1,7 @@
 <template>
   <TheSection bg-class="bg-second">
     <TheSectionTitle class="mb-8">{{ $t('Services') }}</TheSectionTitle>
-    <div class="mb-4 mx-4 text-center text-justify">
+    <div class="mb-4 mx-4 text-center text-justify font-weight-bold">
       {{ $t('service_short_description') }}
     </div>
     <v-row>
@@ -99,6 +99,7 @@ export default {
   font-size: 1rem;
   text-align: justify;
   text-justify: inter-word;
+  font-weight: 700;
 }
 .v-card__title {
   font-weight: 800;

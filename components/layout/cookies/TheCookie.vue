@@ -13,22 +13,25 @@
           >
         </div>
         <div class="flex-grow-1 text-justify px-3">
-          Can I use cookies for analytics? Read
-          <PrivacyDialog> the privacy policy</PrivacyDialog> for more
-          information!
-        </div>
-        <div
-          class="d-flex justify-space-between"
-          :class="{ 'flex-column': $vuetify.breakpoint.mobile }"
-        >
-          <v-btn
-            color="primary"
-            :class="{ 'mb-2': $vuetify.breakpoint.mobile }"
-            @click="accept"
+          <div
+            class="d-flex justify-space-between"
+            :class="{ 'flex-column': $vuetify.breakpoint.mobile }"
           >
-            Accept
-          </v-btn>
-          <v-btn text @click="refuse"> Refuse </v-btn>
+            <div>
+              {{ $t('cookies_sentence_before') }}
+              <PrivacyDialog> {{ $t('privacy_policy_link') }}</PrivacyDialog>
+              {{ $t('cookies_sentence_after') }}
+            </div>
+          </div>
+          <div
+            class="text-center"
+            :class="{ 'mt-2': $vuetify.breakpoint.mobile }"
+          >
+            <v-btn color="primary" @click="accept">
+              {{ $t('accept') }}
+            </v-btn>
+            <v-btn text @click="refuse"> {{ $t('refuse') }} </v-btn>
+          </div>
         </div>
       </div>
     </TheContainer>

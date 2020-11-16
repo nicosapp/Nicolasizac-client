@@ -3,90 +3,127 @@ export default {
   'Contact-me': 'Contactez-moi',
   Projects: 'Projets',
   Profile: 'Profil',
-  'Tech profile': 'Profil technique',
   'All services': 'Tous les services',
   Print: 'Imprimer',
   Presentation: 'Présentation',
   Experiences: 'Expériences',
   Enterprise: 'Entreprise',
   'Phone number': 'N° de téléphone',
+  Education: 'Formation',
   Name: 'Nom',
+  Home: 'Accueil',
+  accept: 'Accepter',
+  refuse: 'Refuser',
+
+  // seo
+  pages: {
+    homepage: {
+      title: 'Accueil',
+      description:
+        'Freelance fullstack Front-end (NuxtJS, VueJS) et Backend (Laravel) developper',
+    },
+    tech_profile: {
+      title: 'Profil technique',
+      description:
+        'Ensemble de mes expériences en entreprise et projets ainsi que ma formation',
+    },
+    services: {
+      title: 'Services',
+      description:
+        'Listes des services et technologies que je propose pour réaliser vos projets',
+    },
+    contact: {
+      title: 'Contact',
+      description:
+        'Accédez au formulaire de contact pour discuter ensemble de votre projet',
+    },
+    projects: {
+      title: 'Projets',
+      description:
+        "Listes des projets sur lesquels j'ai travaillé et liens direct vers Github",
+    },
+  },
+  // cookies
+
+  cookies_sentence_before:
+    'Est-ce que je peux utiliser vos cookies pour mes statistiques? Lisez',
+  privacy_policy_link: 'la Politique de confidentialité',
+  cookies_sentence_after: "pour plus d'information",
 
   // presentation
-  'Spécialisé front-end avec': 'Front-end expert with',
+  'Front-end expert with': 'Spécialisé front-end avec',
+  'and Back-end with': 'et Back-end avec',
+
   'Go to projects': 'Voir les projets',
   'Profil technique': 'Tech profile',
 
   // section me
   section_me_firstline:
-    'Passionné depuis toujours par le secteur du web, je suis un \
-    développeur autodidacte.',
+    "Passionné depuis toujours par la programmation et le développement web, \
+    j'ai developpé mes compétences théroriques \
+    durant ma formation d'ingénieur puis pratique en autodidacte.",
 
   section_me_description:
-    "Après plusieurs expériences en start-up, je suis aujourd'hui \
-    développeur freelance, je partage mon temps entre les missions et les \
+    "Après plusieurs expériences dans de grands groupes, je suis aujourd'hui \
+    développeur freelance/consultant, je partage mon temps entre les missions et les \
     projets Open-Source. Spécialisé dans les langages et framework JS et \
     Typescript, je suis expert en Front-End avec Vue.JS/Nuxt.JS et \
-    React.JS avec de solides compétences en Node.JS, Docker et bien \
-    d'autres. Je vous laisse voir mon parcours, mes projets et mes \
-    compétences ci-dessous.",
+    React.JS. J'ai aussi de très solides compétences en développement backend Laravel. \
+    Pour vous faire une idée sur mes compétences, vous trouverez ci-dessous la liste de mes projets, mes expériences et mon parcours!",
 
   project_mycodesnippets_description:
-    'MyCodeSnippets est une librarie de composants autonomes pour aider les développeurs à créer des \
-    interfaces avancées avec Vue.JS et Nuxt.JS. Tous les composants gèrent le thème dark et \
-    light comme sur ce site.',
+    "MyCodeSnippets est une application web et mobile (PWA) permettant l'enregistrement de morceaux de code \
+    ou de listes d'étapes récurrentes. En créant différents `Snippets` vous accédez rapidement et simplement à vos morceaux de codes. \
+    Vous pouvez rendre vos snippets accessibles aux autres utilisateurs en les passant en mode `public`.",
   project_myvoc_description:
-    'MyVoc est une librarie de composants autonomes pour aider les développeurs à créer des \
-    interfaces avancées avec Vue.JS et Nuxt.JS. Tous les composants gèrent le thème dark et \
-    light comme sur ce site.',
+    "MyVoc est une plateforme web et mobile (PWA) d'apprentissage des langues étrangères. Choisissez votre \
+    langue de référence puis créez vos différents dictionnaires de langues étrangères. \
+    Pour mémoriser du vocabulaire, enregistrer facilement de nouveaux mots au fil de l'eau en le classant par catégories, étiquettes grammaticales, niveau de langue...",
   project_mespetitshabits_description:
-    'MesPetitsHabits.fr est une librarie de composants autonomes pour aider les développeurs à créer des \
-    interfaces avancées avec Vue.JS et Nuxt.JS. Tous les composants gèrent le thème dark et \
-    light comme sur ce site.',
+    "MesPetitsHabits.fr est une marketplace de vente de vêtements et d'accessoires d'occasion dédiée uniquement aux enfants. \
+    MesPetitsHabits a pour vocation de lutter contre le gaspillage et la surconsommation en donnant une seconde vie aux objets",
   project_memocards_description:
-    'Memocards est une librarie de composants autonomes pour aider les développeurs à créer des \
-    interfaces avancées avec Vue.JS et Nuxt.JS. Tous les composants gèrent le thème dark et \
-    light comme sur ce site.',
+    'Memocards est une application web de création de fiches et pense-bêtes',
   project_dokanstorecarousel_description:
-    'Dokan Store Carousel for Wordpress est une librarie de composants autonomes pour aider les développeurs à créer des \
-    interfaces avancées avec Vue.JS et Nuxt.JS. Tous les composants gèrent le thème dark et \
-    light comme sur ce site.',
+    "Dokan Store Carousel for Wordpress est un plugin Wordpress enrichissant le module de MarketPlace Dokan. \
+    Il permet à l'aide d'un `shortcode` d'intégrer facilement un carrousel personnalisable sur les `Stores` du site enregistré.",
 
   service_short_description:
-    "En tant que développeur Full Stack, je propose mes services pour la création d'un \
-    nouveau projet ou pour intervenir sur projets JS existants.",
+    "En tant que développeur Full Stack, je propose mes compétences pour la création d'un \
+    nouveau projet ou pour intervenir sur vos projets web/mobile existants.",
 
   service_frontend_description_short:
-    "Développement d'applications Front-End performantes et de features complexes. \
-    Avec Vue.JS, React.JS ou Nuxt.JS pour un Front-End SEO friendly.",
+    "Développement d'applications Front-End (SPA, Universal, PWA) performantes et de features complexes. \
+    Avec la technologie de votre choix pour un Front-End SEO friendly.",
   service_frontend_description:
-    "Étant un developpeur sénior, je suis capable de développer des applications SPA performantes \
-    et optimisées avec les dernières frameworks tels que Vue.JS ou React.JS. J'apporterai mon expertise \
-    pour les fonctionnalités les plus complexes tout en posant une architecture conventionnée. Avec Nuxt.JS \
-    il est possible de mettre en place une site web optimisé pour le SEO (référencement naturel). \
+    "Étant un developpeur expert en Frontend, je suis capable de développer des applications SPA performantes \
+    et optimisées avec les dernières frameworks tels que Vue.JS, React.JS ou Angular. J'apporterai mon expertise \
+    sur les fonctionnalités les plus complexes tout en posant une architecture conventionnée suivant les Good Development Practise. \
+    Nuxt.JS offre la possiblité de mettre en place une site web optimisé pour le SEO (référencement naturel). \
     Je peux également intervenir sur votre projet existant.",
   service_backend_description_short:
-    "À l'heure des projets dits 'API First', je mets en place des projets Node.JS \
+    "À l'heure des projets dits 'API First', je mets en place des projets Laravel puissants et sécurisé (CSRF) \
     que vos applications Front-End ou mobile puissent consommer.",
   service_backend_description:
-    'Je suis un développeur Full Stack JS, ce qui me permet de créer ou d\'intervenir sur vos projets Node.JS. \
-    Dans une époque où la tendance est au "API First" vous avez besoin d\'un API ? Nous pourrions mettre en \
-    place une API branchée à une base de donnée que tous vos plateformes consommeront.',
+    "Avec le développement des PWA, des frontend indépendants, la tendance est aujourd'hui à l'`API First`. \
+    En tant que développeur FullStack créons ensemble avec le très puissant Framework artisan Laravel une API robuste et agile. \
+    Vous avez de plus l'entière liberté sur la technologie de stockage (PostgreSQL, MySQL, ElasticSearch, AWS...).",
   service_mobile_description_short:
-    'Avec des technologies comme React Native ou Flutter, il est possible \
+    'Avec des technologies comme Ionic, React Native ou Flutter, il est possible \
     de développer des applications mobiles natives avec du JS.',
   service_mobile_description:
-    "Avec des technologies telles que React Native ou encore Flutter, il est possible de créer des applications \
-    mobiles natives avec du JS et complètement autonome autonomes. Il est même possible de partager la même \
-    code base entre votre site web et l'application mobile. Un gain de temps et d'argent.",
+    "Avec des technologies telles que Ionic, React Native ou encore Flutter, il est possible de créer des applications \
+    mobiles natives ou PWA avec du JS, complètement autonomes. Grâce au partage du \
+    code base entre votre site web et l'application mobile vous gagnerez du temps et de l'argent.",
   service_cmsintegration_description_short:
-    'Vous souhaitez avoir la possibilité de modifier vous-même le contenu \
-    de votre site sans demander à un développeur ? Je mets en place un CMS Headless avec un Front-End.',
+    'Sachant que près de 40% du web repose sur Wordpress, les CMS restent toujours une option de choix si \
+    vous souhaitez avoir la possibilité de modifier vous-même facilement le contenu de votre site. \
+    Je développe de plus des Front-End puissant connecté à des CMS Headless.',
   service_cmsintegration_description:
-    "Plutôt que Wordpress, aujourd'hui la tendance est au CMS Headless. Les nouveaux arrivant sont Strapi, Prismic, \
-    Contentful, etc... Si vous souhaitez avoir la possibilité de modifier le contenu de votre site facilement et \
-    sans passer par un développeur, cette solution est la votre. Contrairement à Wordpress, le Front-End sera \
-    totalement indépendant et le choix de la technologie est libre.",
+    "Sachant que près de 40% du web repose sur Wordpress, les CMS restent toujours une option de choix si \
+    vous souhaitez avoir la possibilité de modifier vous-même facilement le contenu de votre site. \
+    Aujourd'hui la tendance est au CMS Headless. Les nouveaux arrivant sont Strapi, Prismic, \
+    Contentful, etc... A la différence de Wordpress ou Shopify, le Front-End sera totalement indépendant. Le contenu restera facilement modifiable",
 
   experience_freelance_introduction:
     '__Freelance Fullstack developer__ spécialisé dans les frameworks NuxtJS & Laravel',
@@ -125,6 +162,15 @@ export default {
     mesure acoustique dans le secteur automobile pour compléter les \
     méthodes expérimentales actuelles.',
 
+  experience_insalyon_title: 'Ingénieur Mécanique',
+  experience_insalyon_introduction: '__Formation Ingénieur généraliste__',
+  experience_insalyon_task_1: '__2014 - 2017__ : Génie Mécanique / Industriel',
+  experience_insalyon_task_2:
+    '__2015 - 2016__ : Classes préparatoires intégrées',
+  experience_insalyon_task_3:
+    '__2012 - 2014__ : Classes préparatoires intégrées',
+
+  // Contact
   contact_message_sent_success:
     'Message envoyé! Je vous remercie, je vous recontacte le plus rapidement possible',
 }

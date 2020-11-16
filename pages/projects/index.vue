@@ -18,7 +18,7 @@
         bg="bg"
         class="mb-4"
       />
-      <ProjectMemocards ref="memocards" bg="bg" class="mb-4" />
+      <!-- <ProjectMemocards ref="memocards" bg="bg" class="mb-4" /> -->
     </template>
   </ThePageTemplate>
 </template>
@@ -39,7 +39,19 @@ export default {
   },
   head() {
     return {
-      title: this.$i18n.t('Projects'),
+      title: this.$i18n.t('pages.projects.title'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$i18n.t('pages.projects.title'),
+          hid: 'og:title',
+        },
+        {
+          property: 'og:description',
+          content: this.$i18n.t('pages.projects.description'),
+          hid: 'og:description',
+        },
+      ],
     }
   },
 }

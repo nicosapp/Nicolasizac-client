@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import { getRoutes } from './helpers/sitemap'
 const env = require('dotenv').config()
 
 export default {
@@ -17,9 +18,26 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
-        name: 'Freelance developper Fullstack',
-        content: '',
+        name: 'description',
+        content: 'Freelance fullstack Front-end/Back-end developper',
       },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      { hid: 'og:url', name: 'og:url', content: process.env.CLIENT_URL },
+      { hid: 'og:title', name: 'og:title', content: 'Nicolas Izac' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'Nicolas Izac' },
+      { hid: 'og:locale', name: 'og:locale', content: 'fr' },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: `${process.env.CLIENT_URL}/icon.png`,
+      },
+      // {
+      //   hid: 'google-site-verification',
+      //   name: 'google-site-verification',
+      //   content: process.env.GOOGLE_SITE_VERIFICATION_TOKEN,
+      // },
+      { name: 'msapplication-TileColor', content: '#22c1c3' },
+      { name: 'theme-color', content: '#fff' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -37,6 +55,8 @@ export default {
     '~/plugins/aos',
     { src: '~/plugins/google-analytics.js', mode: 'client' },
   ],
+
+  env: env.parsed,
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -58,6 +78,8 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/auth',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
     [
       'nuxt-i18n',
       {
@@ -89,8 +111,8 @@ export default {
       source: './static/icon.png',
     },
     manifest: {
-      name: 'Niz',
-      short_name: 'Niz',
+      name: '',
+      short_name: '',
       lang: 'fr',
       display: 'standalone',
       background_color: '#fff',
@@ -131,7 +153,28 @@ export default {
     baseURL: env.parsed.API_URL,
   },
 
-  env: env.parsed,
+  // Sitemap module configuration
+  sitemap: {
+    path: '/sitemap.xml', // L'emplacement de votre fichier sitemap.
+    hostname: process.env.CLIENT_URL, // L'adresse de votre site, que vous pouvez placer comme ici dans une variable d'environnement.
+    cacheTime: 1000 * 60 * 15, // La durée avant que le sitemap soit regénéré. Ici 15mn.
+    gzip: true,
+    generate: false, // Génère une version statique du sitemap quand activé. À utiliser avec nuxt generate.
+    exclude: [
+      // Les pages qu'on a pas trop envie de voir atterrir sur Google.
+      '/login',
+      '/admin/**',
+    ],
+    routes() {
+      // Nous allons utiliser une fonction personnalisée pour charger nos routes dynamiques dans le sitemap.
+      return getRoutes()
+    },
+  },
+  // Sitemap module configuration
+  robots: {
+    Disallow: ['/login', '/admin'],
+    Sitemap: `${process.env.CLIENT_URL}/sitemap.xml`,
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {

@@ -26,7 +26,6 @@
         <div v-html="$md($t(`experience_ge_task_${index}`), 'inline')" />
       </div>
     </template>
-    <template v-slot:bottom> </template>
   </ExperienceTemplate>
 </template>
 

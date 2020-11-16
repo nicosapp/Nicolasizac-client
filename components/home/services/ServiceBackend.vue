@@ -2,8 +2,6 @@
   <ServiceTemplate :text-left="textLeft">
     <template v-slot:image>
       <v-img
-        data-aos="fade-up"
-        data-aos-once="true"
         :lazy-src="require('~/assets/images/services/backend.svg')"
         :src="require('~/assets/images/services/backend.svg')"
         max-width="80%"

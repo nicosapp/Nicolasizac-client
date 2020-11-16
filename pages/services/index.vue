@@ -37,7 +37,19 @@ export default {
   layout: 'home',
   head() {
     return {
-      title: this.$i18n.t('Services'),
+      title: this.$i18n.t('pages.services.title'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$i18n.t('pages.services.title'),
+          hid: 'og:title',
+        },
+        {
+          property: 'og:description',
+          content: this.$i18n.t('pages.services.description'),
+          hid: 'og:description',
+        },
+      ],
     }
   },
 }
