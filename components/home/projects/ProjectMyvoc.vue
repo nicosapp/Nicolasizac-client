@@ -47,6 +47,7 @@ export default {
       chips: [
         'NuxtJS',
         'VueJS',
+        'Vuex',
         'Codemirror',
         'Markdown',
         'Lodash',
