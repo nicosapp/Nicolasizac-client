@@ -6,7 +6,7 @@
     :bg-class="bgClass"
     :text-first="true"
   >
-    {{ $t('project_dokanstorecarousel_description') }}
+    {{ $t('projects.dokanstorecarousel.description') }}
 
     <template v-slot:images>
       <v-row class="fill-height">

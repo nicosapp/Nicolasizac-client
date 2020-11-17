@@ -1,6 +1,6 @@
 <template>
   <ExperienceTemplate
-    :title="$t('Manufacturing Engineer')"
+    :title="$t('experiences.ge.title')"
     enterprise-name="General Electric Healthcare"
     enterprise-link="https://www.gehealthcare.fr/"
     :date="`Nov 2018,  ${$t('Jul')} 2020`"
@@ -18,12 +18,12 @@
       </div>
     </template>
     <template v-slot:content>
-      <div v-html="$md($t('experience_ge_introduction'), 'inline')"></div>
+      <div v-html="$md($t('experiences.ge.introduction'), 'inline')"></div>
     </template>
     <template v-slot:details>
       <div v-for="index in 4" :key="index" class="d-flex align-start mb-3">
         <v-icon small>mdi-chevron-right</v-icon>
-        <div v-html="$md($t(`experience_ge_task_${index}`), 'inline')" />
+        <div v-html="$md($t(`experiences.ge.task_${index}`), 'inline')" />
       </div>
     </template>
   </ExperienceTemplate>

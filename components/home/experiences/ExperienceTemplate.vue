@@ -55,7 +55,7 @@
           small
           color="primary"
           depressed
-          class="text-capitalize elevation-1 font-weight-medium mr-2 mb-2"
+          class="text-capitalize elevation-1 font-weight-bold mr-2 mb-2"
         >
           {{ item }}
         </v-btn>

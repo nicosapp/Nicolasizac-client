@@ -20,14 +20,14 @@ import ProjectMycodesnippets from '@/components/home/projects/ProjectMycodesnipp
 import ProjectMemocards from '@/components/home/projects/ProjectMemocards'
 import ProjectMyvoc from '@/components/home/projects/ProjectMyvoc'
 import ProjectMespetitshabits from '@/components/home/projects/ProjectMespetitshabits'
-import ProjectWpDokanStoreCarousel from '@/components/home/projects/ProjectWpDokanStoreCarousel'
+import ProjectWpdokanstorecarousel from '@/components/home/projects/ProjectWpdokanstorecarousel'
 export default {
   components: {
     ProjectMycodesnippets,
     ProjectMemocards,
     ProjectMyvoc,
     ProjectMespetitshabits,
-    ProjectWpDokanStoreCarousel,
+    ProjectWpdokanstorecarousel,
   },
   data() {
     return {
@@ -37,7 +37,7 @@ export default {
         { name: 'MyVoc', component: 'myvoc' },
         // { name: 'Memocards', component: 'memocards' },
         { name: 'MesPetitsHabits', component: 'mespetitshabits' },
-        { name: 'Dokan Store Carousel', link: 'dokanstorecarousel' },
+        { name: 'Dokan Store Carousel', component: 'wpdokanstorecarousel' },
       ],
     }
   },

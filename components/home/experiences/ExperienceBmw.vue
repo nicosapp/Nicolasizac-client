@@ -1,6 +1,6 @@
 <template>
   <ExperienceTemplate
-    :title="$t('R&D Engineer')"
+    :title="$t('experiences.bmw.title')"
     enterprise-name="BMW"
     enterprise-link="https://www.bmw.fr/fr/accueil.html"
     :date="`${$t('Feb')} 2018, ${$t('Aug')} 2018`"
@@ -18,7 +18,7 @@
       </div>
     </template>
     <template v-slot:content>
-      <div v-html="$md($t('experience_bmw_introduction'), 'inline')"></div>
+      <div v-html="$md($t('experiences.bmw.introduction'), 'inline')"></div>
     </template>
     <template v-slot:bottom> </template>
   </ExperienceTemplate>

@@ -7,7 +7,7 @@
     :bg-class="bgClass"
     :chips="chips"
   >
-    {{ $t('project_memocards_description') }}
+    {{ $t('projects.memocards.description') }}
 
     <template v-slot:images>
       <v-row class="fill-height">

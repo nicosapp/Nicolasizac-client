@@ -8,7 +8,7 @@
     link-demo="https://myvoc.space"
     :chips="chips"
   >
-    {{ $t('project_myvoc_description') }}
+    {{ $t('projects.myvoc.description') }}
 
     <template v-slot:images>
       <v-row class="fill-height">

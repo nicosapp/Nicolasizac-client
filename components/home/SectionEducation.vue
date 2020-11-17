@@ -4,7 +4,7 @@
     <v-row style="width: 100%" justify="center">
       <v-col cols="12" md="8" data-aos="fade-up" data-aos-once="true">
         <ExperienceTemplate
-          :title="$t('Mechanical Engineer')"
+          :title="$t('experiences.insalyon.title')"
           enterprise-name="INSA Lyon"
           enterprise-link="https://www.insa-lyon.fr/"
           :date="`2012,  2017`"
@@ -23,7 +23,7 @@
           </template>
           <template v-slot:content>
             <div
-              v-html="$md($t('experience_insalyon_introduction'), 'inline')"
+              v-html="$md($t('experiences.insalyon.introduction'), 'inline')"
             ></div>
           </template>
 
@@ -35,7 +35,7 @@
             >
               <v-icon small>mdi-chevron-right</v-icon>
               <div
-                v-html="$md($t(`experience_insalyon_task_${index}`), 'inline')"
+                v-html="$md($t(`experiences.insalyon.task_${index}`), 'inline')"
               />
             </div>
           </template>

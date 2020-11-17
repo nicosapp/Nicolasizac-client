@@ -1,7 +1,7 @@
 <template>
   <ExperienceTemplate
     :button-name="$t('Projects')"
-    title="Freelance Full Stack Developper"
+    :title="$t('experiences.freelance.title')"
     enterprise-name="Freelance"
     :date="`Oct 2019, ${$t('Now')}`"
     :chips="chips"
@@ -16,7 +16,7 @@
     </template>
     <template v-slot:content>
       <div
-        v-html="$md($t('experience_freelance_introduction'), 'inline')"
+        v-html="$md($t('experiences.freelance.introduction'), 'inline')"
       ></div>
     </template>
     <template v-slot:details>
@@ -24,7 +24,7 @@
         v-for="index in 3"
         :key="index"
         class="mb-3"
-        v-html="$md($t(`experience_freelance_task_${index}`), 'inline')"
+        v-html="$md($t(`experiences.freelance.task_${index}`), 'inline')"
       ></div>
     </template>
     <template v-slot:bottom> </template>

@@ -6,7 +6,7 @@
     link-demo="https://mespetitshabits.fr"
     :chips="chips"
   >
-    {{ $t('project_mespetitshabits_description') }}
+    {{ $t('projects.mespetitshabits.description') }}
 
     <template v-slot:images>
       <v-row class="fill-height">

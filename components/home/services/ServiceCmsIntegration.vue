@@ -11,7 +11,7 @@
     <template v-slot:description>
       <TheSectionTitle class="mb-8">CMS Integration</TheSectionTitle>
       <div class="text-justify">
-        {{ $t('service_cmsintegration_description') }}
+        {{ $t('services.cmsintegration.description') }}
       </div>
     </template>
   </ServiceTemplate>

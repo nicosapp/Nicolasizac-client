@@ -8,7 +8,7 @@
     link-demo="https://mycodesnippets.tech"
     :chips="chips"
   >
-    {{ $t('project_mycodesnippets_description') }}
+    {{ $t('projects.mycodesnippets.description') }}
 
     <template v-slot:images>
       <v-row class="fill-height">

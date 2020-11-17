@@ -10,7 +10,7 @@
     </template>
     <template v-slot:description>
       <TheSectionTitle class="mb-8">Frontend</TheSectionTitle>
-      <div class="text-justify">{{ $t('service_frontend_description') }}</div>
+      <div class="text-justify">{{ $t('services.frontend.description') }}</div>
     </template>
   </ServiceTemplate>
 </template>

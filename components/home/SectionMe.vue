@@ -3,9 +3,9 @@
     <v-row justify="center" align="center" :style="flexStyle">
       <v-col cols="12" md="6" data-aos="fade-up">
         <p class="mb-8 mx-2 mx-sm-0 text-justify">
-          {{ $t('section_me_firstline') }}
+          {{ $t('sections.me.firstline') }}
           <br /><br />
-          {{ $t('section_me_description') }}
+          {{ $t('sections.me.description') }}
         </p>
         <div
           class="d-flex justify-space-around align-center"
@@ -30,7 +30,7 @@
         </div>
       </v-col>
       <v-col cols="12" md="6" class="d-flex align-center pl-8 mb-8">
-        <ThePageTitle>{{ $t('Me concernant') }}</ThePageTitle>
+        <ThePageTitle>{{ $t('sections.me.title') }}</ThePageTitle>
       </v-col>
     </v-row>
   </TheSection>

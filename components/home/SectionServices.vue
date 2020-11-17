@@ -2,14 +2,14 @@
   <TheSection bg-class="bg-second">
     <TheSectionTitle class="mb-8">{{ $t('Services') }}</TheSectionTitle>
     <div class="mb-4 mx-4 text-center text-justify font-weight-bold">
-      {{ $t('service_short_description') }}
+      {{ $t('services.introduction') }}
     </div>
     <v-row>
       <v-col cols="12" md="6" data-aos="fade-up">
         <v-card class="service-card first">
           <v-card-title>Frontend</v-card-title>
           <v-card-text>
-            {{ $t('service_frontend_description_short') }}
+            {{ $t('services.frontend.short') }}
           </v-card-text>
         </v-card>
       </v-col>
@@ -17,7 +17,7 @@
         <v-card class="service-card second">
           <v-card-title>Backend</v-card-title>
           <v-card-text>
-            {{ $t('service_backend_description_short') }}
+            {{ $t('services.backend.short') }}
           </v-card-text>
         </v-card>
       </v-col>
@@ -27,7 +27,7 @@
         <v-card class="service-card third">
           <v-card-title>Mobile</v-card-title>
           <v-card-text>
-            {{ $t('service_mobile_description_short') }}
+            {{ $t('services.mobile.short') }}
           </v-card-text>
         </v-card>
       </v-col>
@@ -35,7 +35,7 @@
         <v-card class="service-card fourth">
           <v-card-title>CMS Integration</v-card-title>
           <v-card-text>
-            {{ $t('service_cmsintegration_description_short') }}
+            {{ $t('services.cmsintegration.short') }}
           </v-card-text>
         </v-card>
       </v-col>
@@ -110,11 +110,12 @@ export default {
   border-radius: 1rem;
   height: 100%;
   &.first {
-    background: linear-gradient(180deg, #9013fe, #1e90ff);
-    .v-card__text,
-    .v-card__title {
-      color: white !important;
-    }
+    // background: linear-gradient(180deg, #9013fe, #1e90ff);
+    background: linear-gradient(#dcdcdc, #969696);
+    // .v-card__text,
+    // .v-card__title {
+    //   color: white !important;
+    // }
   }
   &.second {
     background: linear-gradient(180deg, #50e3c2, #1e90ff);
@@ -123,11 +124,12 @@ export default {
     background: linear-gradient(180deg, #b8e986, #50e3c2);
   }
   &.fourth {
-    background: linear-gradient(180deg, #9013fe, #bd10e0);
-    .v-card__text,
-    .v-card__title {
-      color: white !important;
-    }
+    // background: linear-gradient(180deg, #9013fe, #bd10e0);
+    background: linear-gradient(180deg, #e8de6d, #ffae00);
+    // .v-card__text,
+    // .v-card__title {
+    //   color: white !important;
+    // }
   }
 }
 </style>

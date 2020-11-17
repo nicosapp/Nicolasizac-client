@@ -13,7 +13,7 @@
       <ProjectMycodesnippets ref="mycodesnippets" bg="bg" class="mb-4" />
       <ProjectMyvoc ref="myvoc" bg="bg" class="mb-4" />
       <ProjectMespetitshabits ref="mespetitshabits" bg="bg" class="mb-4" />
-      <ProjectWpDokanStoreCarousel
+      <ProjectWpdokanstorecarousel
         ref="dokanstorecarousel"
         bg="bg"
         class="mb-4"

@@ -18,9 +18,11 @@
             :class="{ 'flex-column': $vuetify.breakpoint.mobile }"
           >
             <div>
-              {{ $t('cookies_sentence_before') }}
-              <PrivacyDialog> {{ $t('privacy_policy_link') }}</PrivacyDialog>
-              {{ $t('cookies_sentence_after') }}
+              {{ $t('cookies.sentence.before') }}
+              <PrivacyDialog>
+                {{ $t('cookies.privacy_policy_link') }}</PrivacyDialog
+              >
+              {{ $t('cookies.sentence.after') }}
             </div>
             <div
               class="text-center"

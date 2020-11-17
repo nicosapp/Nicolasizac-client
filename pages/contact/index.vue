@@ -50,7 +50,7 @@
             transition="scale-transition"
             icon="mdi-send-check"
             prominent
-            >{{ $t('contact_message_sent_success') }}</v-alert
+            >{{ $t('pages.contact.message_sent') }}</v-alert
           >
           <v-form v-else ref="form" v-model="valid" @submit.prevent="send">
             <v-text-field

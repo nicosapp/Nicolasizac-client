@@ -1,6 +1,6 @@
 <template>
   <ExperienceTemplate
-    :title="$t('Manufacturing Engineer')"
+    :title="$t('experiences.staubli.title')"
     enterprise-name="Stäubli Textile"
     enterprise-link="https://www.staubli.com/fr-fr/textile/"
     :date="`${$t('Feb')} 2018, ${$t('Aug')} 2018`"
@@ -18,12 +18,12 @@
       </div>
     </template>
     <template v-slot:content>
-      <div v-html="$md($t('experience_staubli_introduction'), 'inline')"></div>
+      <div v-html="$md($t('experiences.staubli.introduction'), 'inline')"></div>
     </template>
     <template v-slot:details>
       <div v-for="index in 2" :key="index" class="d-flex align-start mb-3">
         <v-icon small>mdi-chevron-right</v-icon>
-        <div v-html="$md($t(`experience_staubli_task_${index}`), 'inline')" />
+        <div v-html="$md($t(`experiences.staubli.task_${index}`), 'inline')" />
       </div>
     </template>
     <template v-slot:bottom> </template>
