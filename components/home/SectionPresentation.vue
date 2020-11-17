@@ -16,7 +16,7 @@
           data-aos-once="true"
           style="font-size: 2.5rem !important"
         >
-          {{ $t('Freelance fullstack Js/PHP developper') }}
+          {{ $t('Freelance fullstack Js/PHP developer') }}
         </div>
         <div class="text-h5 mb-14" data-aos="fade-up" data-aos-once="true">
           {{ $t('Front-end expert with') }}

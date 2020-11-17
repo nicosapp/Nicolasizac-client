@@ -159,7 +159,7 @@ export default {
 
   experiences: {
     freelance: {
-      title: 'Freelance Full Stack Developper',
+      title: 'Freelance Full Stack Developer',
       introduction:
         '__Freelance Fullstack developer__ spécialisé dans les frameworks NuxtJS & Laravel',
       task_1:
