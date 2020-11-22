@@ -14,6 +14,7 @@
           <div>
             <v-btn
               color="primary"
+              :to="{ name: 'projects' }"
               :class="{ 'mb-8': $vuetify.breakpoint.mobile }"
               dark
             >
@@ -22,7 +23,7 @@
             </v-btn>
           </div>
           <div>
-            <v-btn color="secondary"
+            <v-btn color="secondary" :to="{ name: 'tech-profile' }"
               >{{ $t('Tech profile') }}
               <v-icon class="ml-1">mdi-arrow-right-thick</v-icon>
             </v-btn>

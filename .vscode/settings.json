@@ -1,0 +1,27 @@
+{
+    "window.zoomLevel": -1,
+
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatter.typescript": "vscode-typescript",
+
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "eslint.validate": ["vue", "html", "javascript", "typescript"],
+  "eslint.codeAction.showDocumentation": {
+      "enable": true
+  },
+  "eslint.nodeEnv": "",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "scss.validate": false,
+
+  "files.autoSave": "off",
+  "prettier.disableLanguages": [
+    "vue",
+    "javascript"
+  ],
+}
