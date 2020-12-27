@@ -87,7 +87,10 @@ export default {
         { name: 'nuxtjs', path: 'nuxtjs.png' },
         { name: 'vuetify', path: 'vuetify.png' },
         { name: 'react', path: 'react.png' },
+        { name: 'ionic', path: 'ionic.png' },
+        { name: 'angular', path: 'angular.png' },
         { name: 'laravel', path: 'laravel.png' },
+        { name: 'docker', path: 'docker.png' },
       ],
     }
   },

@@ -70,16 +70,16 @@ export default {
     me: {
       title: 'Me concernant',
       firstline:
-        "Passionné depuis toujours par la programmation et le développement web, \
-        j'ai developpé mes compétences théroriques \
-        durant ma formation d'ingénieur puis pratique en autodidacte.",
+        'Féru de nouvelle technologie depuis mon plus jeune âge, je suis diplômé d’une école d’ingénieur (INSA Lyon). Après plusieurs expériences professionnelles \
+        dans des entreprises internationales (BMW, GE), je travaille maintenant comme développeur Freelance \
+        Fullstack, expert avec les frameworks en Javascript/Typescript et Laravel.',
       description:
-        "Après plusieurs expériences dans de grands groupes, je suis aujourd'hui \
-        développeur freelance/consultant, je partage mon temps entre les missions et les \
-        projets Open-Source. Spécialisé dans les langages et framework JS et \
-        Typescript, je suis expert en Front-End avec Vue.JS/Nuxt.JS et \
-        React.JS. J'ai aussi de très solides compétences en développement backend Laravel. \
-        Pour vous faire une idée sur mes compétences, vous trouverez ci-dessous la liste de mes projets, mes expériences et mon parcours!",
+        "En tant que développeur Fullstack confirmé ayant des bases solides administration serveur, \
+        je suis pleinement compétent pour créer “from scratch”, déployer et faire évoluer des applications web et mobile. \
+        Spécialisé dans les langages et framework JS et Typescript, je suis expert en Front-End avec Vue.JS/Nuxt.JS et \
+        React.JS. J'ai aussi de très solides compétences en développement backend Laravel.<br>\
+        Suivant la méthodologie agile, je réaliserai et livrerai vos projets à temps en respectant vos deadlines<br/> \
+        Vous trouverez ci-dessous la liste de mes projets, mes expériences et mon parcours!",
     },
   },
 
@@ -163,10 +163,12 @@ export default {
       introduction:
         '__Freelance Fullstack developer__ spécialisé dans les frameworks NuxtJS & Laravel',
       task_1:
-        '__Oct. 2020 - Nov. 2020__ - MyVoc - Fullstack Developer | Laravel & NuxtJS',
+        '__Nov. 2020 - maintenant__ - Autorigin - Fullstack Lead Developer | Laravel & Blade',
       task_2:
-        '__Sept. 2020 - Oct. 2020__ - MyCodeSnippets - Fullstack Developer | Laravel & NuxtJS',
+        '__Oct. 2020 - Nov. 2020__ - MyVoc - Fullstack Developer | Laravel & NuxtJS',
       task_3:
+        '__Sept. 2020 - Oct. 2020__ - MyCodeSnippets - Fullstack Developer | Laravel & NuxtJS',
+      task_4:
         '__Mai. 2020 - Sept. 2020__ - MesPetitsHabits - Fullstack Developer | Wordpress & Jquery',
     },
     ge: {

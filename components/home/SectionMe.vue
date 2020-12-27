@@ -4,9 +4,11 @@
       <v-col cols="12" md="6" data-aos="fade-up">
         <p class="mb-8 mx-2 mx-sm-0 text-justify">
           {{ $t('sections.me.firstline') }}
-          <br /><br />
-          {{ $t('sections.me.description') }}
         </p>
+        <p
+          class="mb-8 mx-2 mx-sm-0 text-justify"
+          v-html="$t('sections.me.description')"
+        ></p>
         <div
           class="d-flex justify-space-around align-center"
           :class="{ 'flex-column': $vuetify.breakpoint.mobile }"

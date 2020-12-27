@@ -21,7 +21,7 @@
     </template>
     <template v-slot:details>
       <div
-        v-for="index in 3"
+        v-for="index in 4"
         :key="index"
         class="mb-3"
         v-html="$md($t(`experiences.freelance.task_${index}`), 'inline')"
