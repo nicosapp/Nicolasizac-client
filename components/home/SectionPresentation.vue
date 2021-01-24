@@ -1,7 +1,21 @@
 <template>
   <TheSection bg-class="bg-second">
-    <v-row justify="center" align="center" style="width: 100%">
-      <v-col cols="12" md="6" style="position: relative; z-index: 1">
+    <v-row
+      justify="center"
+      align="stretch"
+      style="width: 100%; margin: -6rem 0 !important"
+    >
+      <v-col
+        cols="12"
+        md="6"
+        class="col-text"
+        style="
+          position: relative;
+          z-index: 1;
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        "
+      >
         <h1
           class="font-weight-bold mb-2"
           style="font-size: 4rem"
@@ -40,7 +54,20 @@
           {{ $t('Contact-me') }}
         </v-btn>
       </v-col>
-      <v-col cols="6" style="position: relative" class="d-flex align-center">
+      <v-col
+        cols="12"
+        md="6"
+        style="position: relative; min-height: 600px"
+        class="col-image d-flex align-center"
+      >
+        <v-img
+          id="profile-image"
+          :src="require(`~/assets/images/profile-full-body.png`)"
+          :lazy-src="require(`~/assets/images/profile-full-body.png`)"
+          contain
+          alt="Nicolas Izac"
+          position="center"
+        ></v-img>
         <div class="icon-wrapper">
           <div class="scroll-animation-wrapper" :style="scrollAnimationStyle">
             <IconHexagone
@@ -97,6 +124,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '~vuetify/src/styles/styles.sass';
 .icon-wrapper {
   position: absolute;
   left: 50%;
@@ -113,5 +141,15 @@ export default {
       transform: rotate(0deg) scale(1);
     }
   }
+}
+@media #{map-get($display-breakpoints,'md-and-down')} {
+  .col-text {
+    padding-bottom: 0 !important;
+  }
+}
+#profile-image {
+  z-index: 1;
+  position: absolute;
+  max-height: 100%;
 }
 </style>

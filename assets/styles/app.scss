@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 @import '~vuetify/src/styles/styles.sass';
+
 @media #{map-get($display-breakpoints,'md-and-down')} {
   .row {
     margin: 0 !important;
@@ -42,6 +43,6 @@ a {
   .v-btn,
   .v-tab,
   p {
-    font-weight: 700;
+    font-weight: 500;
   }
 }
