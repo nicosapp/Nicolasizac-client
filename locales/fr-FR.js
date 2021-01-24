@@ -17,7 +17,7 @@ export default {
   refuse: 'Refuser',
   Skills: 'Technologies',
   Details: 'Détails',
-
+  Now: 'Maintenant',
   // seo
   pages: {
     homepage: {
