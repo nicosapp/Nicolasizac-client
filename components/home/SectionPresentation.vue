@@ -57,7 +57,7 @@
       <v-col
         cols="12"
         md="6"
-        style="position: relative; min-height: 600px"
+        style="position: relative"
         class="col-image d-flex align-center"
       >
         <v-img
@@ -145,6 +145,12 @@ export default {
 @media #{map-get($display-breakpoints,'md-and-down')} {
   .col-text {
     padding-bottom: 0 !important;
+  }
+  .col-image {
+    padding-bottom: 0;
+    #profile-image {
+      position: relative;
+    }
   }
 }
 #profile-image {
