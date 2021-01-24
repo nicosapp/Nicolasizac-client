@@ -2,7 +2,8 @@
   <ExperienceTemplate
     :button-name="$t('Projects')"
     :title="$t('experiences.freelance.title')"
-    enterprise-name="Freelance"
+    enterprise-name="Freelance (Malt)"
+    enterprise-link="https://www.malt.fr/profile/nicolasizac"
     :date="`Oct 2019, ${$t('Now')}`"
     :chips="chips"
   >

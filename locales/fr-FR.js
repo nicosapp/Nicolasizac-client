@@ -172,7 +172,7 @@ export default {
         '__Mai. 2020 - Sept. 2020__ - MesPetitsHabits - Fullstack Developer | Wordpress & Jquery',
     },
     ge: {
-      title: '',
+      title: 'Ingénieur Projets',
       introduction:
         '__Advanced Manufacturer Engineer (AME)__ pour la modalité Advantage Windows.',
       task_1:
@@ -186,7 +186,7 @@ export default {
         virtuelle des produits AW.',
     },
     staubli: {
-      title: 'Ingénieur Industrialisation',
+      title: 'Ingénieur Projets',
       introduction:
         'Gestion d’un portfolio de projets liés aux 3 ateliers de \
       production de Stäubli Lyon (Machines jacquard, Harnais, Composants).',

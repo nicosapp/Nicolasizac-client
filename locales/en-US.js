@@ -148,9 +148,9 @@ export default {
         '__Mai. 2020 - Sept. 2020__ - MesPetitsHabits - Fullstack Developer | Wordpress & Jquery',
     },
     ge: {
-      title: 'Manufacturing Engineer',
+      title: 'Digital Project Officier',
       introduction:
-        'Worked as an __Advanced Manufacturer Engineer (AME)__ in the Advantage Windows modality (AW).',
+        'Worked as an __Digital Project Officier__ in the Advantage Windows modality (AW).',
       task_1:
         'Coordinated with design, sales and operations teams to develop manufacturing plans for \
         New Products Introduction (NPI)  to achieve corporate cost and quality objectives.',
@@ -162,7 +162,7 @@ export default {
         'Implemented is the USA the new eDelivery process (virtual software distribution) for AW products',
     },
     staubli: {
-      title: 'Manufacturing project officier',
+      title: 'Project Officier',
       introduction:
         'Managed an industrial project portfolio in the three \
       production lines (jacquard machines, harnesses, components).',
