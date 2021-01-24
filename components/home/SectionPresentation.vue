@@ -40,7 +40,9 @@
           >
           <br />
           {{ $t('and Back-end with') }}
-          <span class="font-weight-bold" :class="secondLineClass">Laravel</span>
+          <span class="font-weight-bold" :class="firstLineClass"
+            >Laravel & Symfony
+          </span>
         </div>
         <v-btn
           data-aos="fade-up"
@@ -100,7 +102,7 @@ export default {
       }
     },
     firstLineClass() {
-      if (this.$vuetify.breakpoint.mobile && this.scaleValue > 1.4)
+      if (this.$vuetify.breakpoint.mobile && this.scaleValue > 1.6)
         return 'white--text'
       return 'primary--text'
     },

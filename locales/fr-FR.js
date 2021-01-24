@@ -70,7 +70,7 @@ export default {
     me: {
       title: 'Me concernant',
       firstline:
-        'Féru de nouvelle technologie depuis mon plus jeune âge, je suis diplômé d’une école d’ingénieur (INSA Lyon). Après plusieurs expériences professionnelles \
+        'Féru de nouvelles technologies très jeune, je suis diplômé d’une école d’ingénieur (INSA Lyon). Après plusieurs expériences professionnelles \
         dans des entreprises internationales (BMW, GE), je travaille maintenant comme développeur Freelance \
         Fullstack, expert avec les frameworks en Javascript/Typescript et Laravel.',
       description:

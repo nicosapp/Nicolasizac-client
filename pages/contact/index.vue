@@ -32,9 +32,9 @@
                 class="font-weight-medium"
                 style="font-size: 1rem"
               >
-                <nuxt-link :to="`mailto:${email}`">
+                <a :to="`mailto:${email}`">
                   {{ email }}
-                </nuxt-link>
+                </a>
               </v-list-item-title>
             </v-list-item>
             <v-list-item>

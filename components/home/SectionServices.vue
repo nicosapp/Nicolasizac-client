@@ -49,17 +49,22 @@
           <v-card-text
             class="d-flex justify-space-around flex-wrap flex-sm-nowrap"
           >
-            <v-img
-              v-for="techno in technologies"
-              :key="techno.name"
-              class="ma-3 ma-sm-0"
-              :src="require(`~/assets/images/technologies/${techno.path}`)"
-              :lazy-src="require(`~/assets/images/technologies/${techno.path}`)"
-              contain
-              position="center"
-              max-height="80"
-              max-width="80"
-            ></v-img>
+            <div class="techno-grid-wrapper">
+              <v-img
+                v-for="techno in technologies"
+                :key="techno.name"
+                class="ma-3 ma-sm-0"
+                :alt="techno.name"
+                :src="require(`~/assets/images/technologies/${techno.path}`)"
+                :lazy-src="
+                  require(`~/assets/images/technologies/${techno.path}`)
+                "
+                contain
+                position="center"
+                max-height="100"
+                max-width="100"
+              ></v-img>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -90,6 +95,7 @@ export default {
         { name: 'ionic', path: 'ionic.png' },
         { name: 'angular', path: 'angular.png' },
         { name: 'laravel', path: 'laravel.png' },
+        { name: 'symfony', path: 'symfony.png' },
         { name: 'docker', path: 'docker.png' },
       ],
     }
@@ -135,4 +141,23 @@ export default {
     // }
   }
 }
+.techno-grid-wrapper {
+  // display: grid;
+  // grid-gap: 50px;
+  // grid-template-columns: repeat(4, 1fr);
+  // justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+// @import '~vuetify/src/styles/styles.sass';
+// @media #{map-get($display-breakpoints,'md-and-down')} {
+//   .techno-grid-wrapper {
+//     display: grid;
+//     grid-gap: 10px !important;
+//     grid-template-columns: repeat(2, 1fr);
+//     justify-items: center;
+//   }
+// }
 </style>
