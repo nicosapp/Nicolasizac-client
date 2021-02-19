@@ -139,12 +139,16 @@ export default {
       introduction:
         '__Freelance Fullstack developer__ spécialisé dans les frameworks NuxtJS & Laravel',
       task_1:
-        '__Nov. 2020 - now__ - Autorigin - Fullstack Lead Developer | Laravel & Blade',
+        '__Nov. 2020 - Now__ - Carnet de Retraite - Frontend Lead Developer | VueJS & Material Design Bootstrap',
       task_2:
-        '__Oct. 2020 - Nov. 2020__ - MyVoc - Fullstack Developer | Laravel & NuxtJS',
+        '__Jul. 2020 - Dec. 2020__ - Comenregions - Fullstack Lead Developer | Symfony & React & Metronic',
       task_3:
-        '__Sept. 2020 - Oct. 2020__ - MyCodeSnippets - Fullstack Developer | Laravel & NuxtJS',
+        '__Feb. 2020 - Oct__ - Autorigin - Fullstack Lead Developer | Laravel & Blade',
       task_4:
+        '__Oct. 2020 - Nov. 2020__ - MyVoc - Fullstack Developer | Laravel & NuxtJS',
+      task_5:
+        '__Sept. 2020 - Oct. 2020__ - MyCodeSnippets - Fullstack Developer | Laravel & NuxtJS',
+      task_6:
         '__Mai. 2020 - Sept. 2020__ - MesPetitsHabits - Fullstack Developer | Wordpress & Jquery',
     },
     ge: {
@@ -152,23 +156,23 @@ export default {
       introduction:
         'Worked as an __Digital Project Officier__ in the Advantage Windows modality (AW).',
       task_1:
-        'Coordinated with design, sales and operations teams to develop manufacturing plans for \
-        New Products Introduction (NPI)  to achieve corporate cost and quality objectives.',
+        'Coordinated with manufacturing, sales and developments teams to implement new features on the SaaS \
+        eDelivery application  to achieve corporate cost and quality objectives.',
       task_2:
         'Conducted regular project meetings with management and team members to track project status and progress.',
-      task_3:
-        'Evaluated and improved manufacturing methods for maximum efficiency.',
+      task_3: 'Evaluated and improved user stories for maximum efficiency.',
       task_4:
         'Implemented is the USA the new eDelivery process (virtual software distribution) for AW products',
     },
     staubli: {
       title: 'Project Officier',
       introduction:
-        'Managed an industrial project portfolio in the three \
+        'Managed the implementation of the MES for the three \
       production lines (jacquard machines, harnesses, components).',
-      task_1: 'Implemented MES for the drive control screwing.',
+      task_1:
+        'Collected user requirements and translated them in technical specifications.',
       task_2:
-        'Retrofit of a special machinery (machine value € 1 million 5) by adding a framework above (framework value (€ 100 000).',
+        'Conducted planning & reportings meetings. Followed suppliers work progress.',
     },
     bmw: {
       title: 'R&D Engineer',
@@ -177,9 +181,9 @@ export default {
       transmission for the automotive industry time and resource saving.',
     },
     insalyon: {
-      title: 'Mechanical/Industrial Engineer',
-      introduction: '__M. Sc. Mechanical / Industrial Engineering__',
-      task_1: '__2014 - 2017__ : M. Sc. Mechanical / Industrial Engineering',
+      title: 'Mechanical/Computer Engineer',
+      introduction: '__M. Sc. Mechanical & Computer Engineering__',
+      task_1: '__2014 - 2017__ : M. Sc. Mechanical / Computer Engineering',
       task_2: '__2015 - 2016__ : Exchange semester - TU Berlin',
       task_3: '__2012 - 2014__ : Integrated preparatory classes',
     },

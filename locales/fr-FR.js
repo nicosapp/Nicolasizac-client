@@ -163,23 +163,27 @@ export default {
       introduction:
         '__Freelance Fullstack developer__ spécialisé dans les frameworks NuxtJS & Laravel',
       task_1:
-        '__Nov. 2020 - maintenant__ - Autorigin - Fullstack Lead Developer | Laravel & Blade',
+        '__Nov. 2020 - Auj.__ - Carnet de Retraite - Frontend Lead Developer | VueJS & Material Design Bootstrap',
       task_2:
-        '__Oct. 2020 - Nov. 2020__ - MyVoc - Fullstack Developer | Laravel & NuxtJS',
+        '__Jui. 2020 - Déc. 2020__ - Comenregions - Fullstack Lead Developer | Symfony & React & Metronic',
       task_3:
-        '__Sept. 2020 - Oct. 2020__ - MyCodeSnippets - Fullstack Developer | Laravel & NuxtJS',
+        '__Fév. 2020 - Oct. 2020__ - Autorigin - Fullstack Lead Developer | Laravel & Blade',
       task_4:
+        '__Oct. 2020 - Nov. 2020__ - MyVoc - Fullstack Developer | Laravel & NuxtJS',
+      task_5:
+        '__Sept. 2020 - Oct. 2020__ - MyCodeSnippets - Fullstack Developer | Laravel & NuxtJS',
+      task_6:
         '__Mai. 2020 - Sept. 2020__ - MesPetitsHabits - Fullstack Developer | Wordpress & Jquery',
     },
     ge: {
       title: 'Ingénieur Projets',
       introduction:
-        '__Advanced Manufacturer Engineer (AME)__ pour la modalité Advantage Windows.',
+        '__Digital Project Officier__ pour la modalité Advantage Windows.',
       task_1:
-        "Coordinateur des équipes DFM, Material, Production, Sourcing et OFS \
-        en vue de l'introduction de nouveaux produits (NPI Make/Buy) en \
+        "Coordinateur des équipes d'Industrialisation, Sourcing et de Développement \
+        en vue de l'introduction de nouvelles fonctionnalités en \
         respectant les Jalons Programme et en suivant le process d’ECR/ECO.",
-      task_2: 'Pilote des revues de conception sur la gamme de produits.',
+      task_2: 'Pilote des Sprint reviews et des rétrospectives.',
       task_3: 'Suivi de l’avancement des projets avec les fournisseurs.',
       task_4:
         'Mise en place aux US du nouveau process eDelivery de distribution \
@@ -188,12 +192,11 @@ export default {
     staubli: {
       title: 'Ingénieur Projets',
       introduction:
-        'Gestion d’un portfolio de projets liés aux 3 ateliers de \
+        'Responsable de la mise en place du MES au niveau des 3 ateliers de \
       production de Stäubli Lyon (Machines jacquard, Harnais, Composants).',
-      task_1:
-        'AVP de la nouvelle installation pour la machine \
-        spéciale de rentrage (100 000€).',
-      task_2: 'Mise en place d’un masque paramétrable sous Catia V5 (R14).',
+      task_1: 'Rédaction du dossier de spécification & des plans de tests.',
+      task_2:
+        "Pilote des réunions de suivi et reporting sur l'avancement des prestataires.",
     },
     bmw: {
       title: 'Ingénieur R&D',
@@ -203,9 +206,9 @@ export default {
         méthodes expérimentales actuelles.',
     },
     insalyon: {
-      title: 'Ingénieur Mécanique/Industriel',
+      title: 'Ingénieur Généraliste',
       introduction: '__Formation Ingénieur généraliste__',
-      task_1: '__2014 - 2017__ : Génie Mécanique / Industriel',
+      task_1: '__2014 - 2017__ : Génie Mécanique et Informatique',
       task_2: '__2015 - 2016__ : Echange ERASMUS TU Berlin',
       task_3: '__2012 - 2014__ : Classes préparatoires intégrées',
     },
