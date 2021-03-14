@@ -22,6 +22,7 @@ jobs:
             cd ${{ secrets.REMOTE_TARGET_HOME }}
             rm -rf ./client
             mkdir -p ./client
+            mkdir -p ./sshworks
           host: ${{ secrets.REMOTE_HOST }}
           user: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
