@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: List working dir
+        run: ls -la  
       - name: SSH Create client dir
         uses: fifsky/ssh-action@master
         with:
@@ -36,7 +38,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd ${{ secrets.REMOTE_TARGET_HOME }}/client
+            cd ${{ secrets.REMOTE_TARGET_HOME }}client
             cp ../.env.client ./.env
             npm install
             npm run build
