@@ -26,6 +26,11 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           user: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
+      - name: Create app archive
+        run: |
+          mkdir ../archive
+          cp -TR . ../archive
+          tar -cvf deploy.tar ../archive/
       - name: SSH Deploy App
         uses: appleboy/scp-action@master
         with:
@@ -33,8 +38,8 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           port: 22
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "./"
-          target: ${{ secrets.REMOTE_HOST }}/client
+          source: "deploy.tar"
+          target: ${{ secrets.REMOTE_HOST }}
         # uses: easingthemes/ssh-deploy@v2.1.1
         # env:
         #   SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
@@ -47,7 +52,8 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd ${{ secrets.REMOTE_TARGET_HOME }}client
+            cd ${{ secrets.REMOTE_TARGET_HOME }}
+            tar -C ./client -xvf deploy.tar
             cp ../.env.client ./.env
             npm install
             npm run build
