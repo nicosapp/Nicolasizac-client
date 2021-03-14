@@ -27,8 +27,7 @@ jobs:
         run: |
           mkdir ../archive
           cp -TR . ../archive
-          tar -cvf deploy.tar ../archive/*
-          ls
+          zip -r archive.zip ../archive/
       - name: SSH Deploy App
         uses: appleboy/scp-action@master
         with:
@@ -36,7 +35,7 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           port: 22
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "deploy.tar"
+          source: "archive.zip"
           target: ${{ secrets.REMOTE_TARGET_HOME }}
         # uses: easingthemes/ssh-deploy@v2.1.1
         # env:
@@ -51,7 +50,8 @@ jobs:
         with:
           command: |
             cd ${{ secrets.REMOTE_TARGET_HOME }}
-            tar -C ./client -xvf deploy.tar
+            unzip archive.zip
+            mv archive/* client/
             cd ./client
             cp ../.env.client ./.env
             npm install
