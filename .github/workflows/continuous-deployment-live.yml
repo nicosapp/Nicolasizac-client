@@ -13,21 +13,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: SSH Create client dir
-        uses: fifsky/ssh-action@master
-        with:
-          command: |
-            cd ${{ secrets.REMOTE_TARGET_HOME }}
-            rm -rf ./client
-            mkdir -p ./client
-          host: ${{ secrets.REMOTE_HOST }}
-          user: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
+      # - name: SSH Create client dir
+      #   uses: fifsky/ssh-action@master
+      #   with:
+      #     command: |
+      #       cd ${{ secrets.REMOTE_TARGET_HOME }}
+      #       rm -rf ./client
+      #       mkdir -p ./client
+      #     host: ${{ secrets.REMOTE_HOST }}
+      #     user: ${{ secrets.REMOTE_USER }}
+      #     key: ${{ secrets.SERVER_SSH_KEY }}
       - name: Create app archive
         run: |
           mkdir ../archive
           cp -TR . ../archive
-          zip -r archive.zip ../archive/
+          zip -r client.zip ../archive/
       - name: SSH Deploy App
         uses: appleboy/scp-action@master
         with:
@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           port: 22
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "archive.zip"
+          source: "client.zip"
           target: ${{ secrets.REMOTE_TARGET_HOME }}
         # uses: easingthemes/ssh-deploy@v2.1.1
         # env:
@@ -50,8 +50,7 @@ jobs:
         with:
           command: |
             cd ${{ secrets.REMOTE_TARGET_HOME }}
-            unzip archive.zip
-            mv archive/* client/
+            unzip client.zip
             cd ./client
             cp ../.env.client ./.env
             npm install
@@ -59,6 +58,8 @@ jobs:
             rm -rf  ${{ secrets.REMOTE_TARGET_WWW }}client/*
             mkdir -p ${{ secrets.REMOTE_TARGET_WWW }}client/
             cp -r ./dist/* ${{ secrets.REMOTE_TARGET_WWW }}client/
+            cd ../ 
+            rm -rf client client.zip
 
           host: ${{ secrets.REMOTE_HOST }}
           user: ${{ secrets.REMOTE_USER }}
