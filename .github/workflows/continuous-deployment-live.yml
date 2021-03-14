@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir ../archive
           cp -TR . ../archive
-          tar -cvf deploy.tar ../archive/
+          tar -cvf deploy.tar ../archive/*
           ls
       - name: SSH Deploy App
         uses: appleboy/scp-action@master
@@ -52,6 +52,7 @@ jobs:
           command: |
             cd ${{ secrets.REMOTE_TARGET_HOME }}
             tar -C ./client -xvf deploy.tar
+            cd ./client
             cp ../.env.client ./.env
             npm install
             npm run build
